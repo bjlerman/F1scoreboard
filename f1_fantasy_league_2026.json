@@ -1,0 +1,322 @@
+{
+  "teams": [
+    {
+      "id": "team_mt55jl5b",
+      "name": "Kaiser Permanente Department of Billustration Racing Team fueled by Little Debbie",
+      "drivers": [
+        {
+          "id": "driver_75be56cm",
+          "name": "Norris"
+        },
+        {
+          "id": "driver_wdfro8rh",
+          "name": "Hadjar"
+        },
+        {
+          "id": "driver_vzoyedza",
+          "name": "Gasly"
+        },
+        {
+          "id": "driver_w417d6b7",
+          "name": "Lawson"
+        }
+      ]
+    },
+    {
+      "id": "team_8k5pfmhf",
+      "name": "Friction Labs Mellow Send Outdoor Boulder F1 Team",
+      "drivers": [
+        {
+          "id": "driver_964zx4mj",
+          "name": "Russell"
+        },
+        {
+          "id": "driver_amtm76tn",
+          "name": "Hadjar"
+        },
+        {
+          "id": "driver_tov4qg6m",
+          "name": "Gasly"
+        },
+        {
+          "id": "driver_1nx2aco6",
+          "name": "Ocon"
+        }
+      ]
+    },
+    {
+      "id": "team_qpkjj5rm",
+      "name": "The Nano Banana Pro Racing Copyright Violations presented by Ask Jeeves",
+      "drivers": [
+        {
+          "id": "driver_faaqd4ev",
+          "name": "Russell"
+        },
+        {
+          "id": "driver_mrda8ugm",
+          "name": "Antonelli"
+        },
+        {
+          "id": "driver_wn45nr6v",
+          "name": "Albon"
+        },
+        {
+          "id": "driver_l5tnqp0z",
+          "name": "Ocon"
+        }
+      ]
+    },
+    {
+      "id": "team_uf2uxyzi",
+      "name": "Scuderia Alberto Ooni Pro-Pizza Racing",
+      "drivers": [
+        {
+          "id": "driver_ak6fj7q6",
+          "name": "Leclerc"
+        },
+        {
+          "id": "driver_146gjp9p",
+          "name": "Antonelli"
+        },
+        {
+          "id": "driver_nrcvq8g4",
+          "name": "Lawson"
+        },
+        {
+          "id": "driver_yj4oh6oa",
+          "name": "Bearman"
+        }
+      ]
+    },
+    {
+      "id": "team_xrrtckxu",
+      "name": "Maxwell House Espresso Martini F1 Team",
+      "drivers": [
+        {
+          "id": "driver_vp2q2kzt",
+          "name": "Norris"
+        },
+        {
+          "id": "driver_rxpduipm",
+          "name": "Hamilton"
+        },
+        {
+          "id": "driver_2ndf1bnp",
+          "name": "Sainz"
+        },
+        {
+          "id": "driver_r7sp3lha",
+          "name": "Bottas"
+        }
+      ]
+    },
+    {
+      "id": "team_pox1i5kk",
+      "name": "The Bad Boy Racing Mowers an experiment in Motorsport powered by Clippy AI",
+      "drivers": [
+        {
+          "id": "driver_bmsug18s",
+          "name": "Verstappen"
+        },
+        {
+          "id": "driver_5pvke2v6",
+          "name": "Hamilton"
+        },
+        {
+          "id": "driver_15a3ng5p",
+          "name": "Albon"
+        },
+        {
+          "id": "driver_nrkpo8bo",
+          "name": "Alonso"
+        }
+      ]
+    },
+    {
+      "id": "team_gi6spxxj",
+      "name": "Entertainment 720 Benjamin Lerman CHEEZ-IT F1 Team",
+      "drivers": [
+        {
+          "id": "driver_lhbwf1t8",
+          "name": "Verstappen"
+        },
+        {
+          "id": "driver_eo2olfxc",
+          "name": "Piastri"
+        },
+        {
+          "id": "driver_knx4vak3",
+          "name": "Sainz"
+        },
+        {
+          "id": "driver_isznaoo2",
+          "name": "Bearman"
+        }
+      ]
+    },
+    {
+      "id": "team_ruqz60y8",
+      "name": "Scuderia Visa Cash App Yoga Pants",
+      "drivers": [
+        {
+          "id": "driver_iwa32uaj",
+          "name": "Leclerc"
+        },
+        {
+          "id": "driver_cbxguinm",
+          "name": "Piastri"
+        },
+        {
+          "id": "driver_z77zm4p7",
+          "name": "Colapinto"
+        },
+        {
+          "id": "driver_izbxx9nu",
+          "name": "Hulkenberg"
+        }
+      ]
+    }
+  ],
+  "races": [
+    {
+      "id": "race_7jw4rpqw",
+      "name": "R01 Australian Grand Prix (Melbourne)",
+      "results": {
+        "Albon": 12,
+        "Alonso": "DNF",
+        "Antonelli": 2,
+        "Bearman": 7,
+        "Bottas": "DNF",
+        "Colapinto": 14,
+        "Gasly": 10,
+        "Hadjar": "DNF",
+        "Hamilton": 4,
+        "Hulkenberg": "DNF",
+        "Lawson": 13,
+        "Leclerc": 3,
+        "Norris": 5,
+        "Ocon": 11,
+        "Piastri": "DNF",
+        "Russell": 1,
+        "Sainz": 15,
+        "Verstappen": 6
+      }
+    },
+    {
+      "id": "race_hzpnw5ru",
+      "name": "R02 Chinese Grand Prix (Shanghai)",
+      "results": {}
+    },
+    {
+      "id": "race_216o822n",
+      "name": "R03 Japanese Grand Prix (Suzuka)",
+      "results": {}
+    },
+    {
+      "id": "race_l0egncav",
+      "name": "R04 Bahrain Grand Prix (Sakhir)",
+      "results": {}
+    },
+    {
+      "id": "race_bk08urak",
+      "name": "R05 Saudi Arabian Grand Prix (Jeddah)",
+      "results": {}
+    },
+    {
+      "id": "race_8ruhs9xg",
+      "name": "R06 Miami Grand Prix (Miami)",
+      "results": {}
+    },
+    {
+      "id": "race_lfrmvpmv",
+      "name": "R07 Canadian Grand Prix (Montreal)",
+      "results": {}
+    },
+    {
+      "id": "race_fg9uo1wj",
+      "name": "R08 Monaco Grand Prix (Monte Carlo)",
+      "results": {}
+    },
+    {
+      "id": "race_gnsflv1i",
+      "name": "R09 Barcelona Grand Prix (Barcelona)",
+      "results": {}
+    },
+    {
+      "id": "race_v9rb699n",
+      "name": "R10 Austrian Grand Prix (Spielberg)",
+      "results": {}
+    },
+    {
+      "id": "race_oa33irct",
+      "name": "R11 British Grand Prix (Silverstone)",
+      "results": {}
+    },
+    {
+      "id": "race_zzp5p6i8",
+      "name": "R12 Belgian Grand Prix (Spa)",
+      "results": {}
+    },
+    {
+      "id": "race_5k52saok",
+      "name": "R13 Hungarian Grand Prix (Budapest)",
+      "results": {}
+    },
+    {
+      "id": "race_4i9xchxd",
+      "name": "R14 Dutch Grand Prix (Zandvoort)",
+      "results": {}
+    },
+    {
+      "id": "race_tgfbu22c",
+      "name": "R15 Italian Grand Prix (Monza)",
+      "results": {}
+    },
+    {
+      "id": "race_wiqz6bez",
+      "name": "R16 Spanish Grand Prix (Madrid)",
+      "results": {}
+    },
+    {
+      "id": "race_9zwhinat",
+      "name": "R17 Azerbaijan Grand Prix (Baku)",
+      "results": {}
+    },
+    {
+      "id": "race_6g7psmn6",
+      "name": "R18 Singapore Grand Prix (Marina Bay)",
+      "results": {}
+    },
+    {
+      "id": "race_9t0oouui",
+      "name": "R19 United States Grand Prix (Austin)",
+      "results": {}
+    },
+    {
+      "id": "race_nkiz7bax",
+      "name": "R20 Mexico City Grand Prix (Mexico City)",
+      "results": {}
+    },
+    {
+      "id": "race_cwhubzi6",
+      "name": "R21 Brazilian Grand Prix (São Paulo)",
+      "results": {}
+    },
+    {
+      "id": "race_8exe3q55",
+      "name": "R22 Las Vegas Grand Prix (Las Vegas)",
+      "results": {}
+    },
+    {
+      "id": "race_uoo7buxo",
+      "name": "R23 Qatar Grand Prix (Lusail)",
+      "results": {}
+    },
+    {
+      "id": "race_7dcz02fc",
+      "name": "R24 Abu Dhabi Grand Prix (Abu Dhabi)",
+      "results": {}
+    }
+  ],
+  "scheduleSynced": true
+}

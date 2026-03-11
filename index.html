@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Fantasy League 2026 - Retro Board</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="crt"></div>
+  <header class="title-bar panel masthead">
+    <div class="pixel-icon f1-pixel-logo" aria-hidden="true">
+      <svg viewBox="0 0 96 48" xmlns="http://www.w3.org/2000/svg" role="img">
+        <rect x="2" y="2" width="20" height="8" fill="#ff2d2d"/>
+        <rect x="2" y="12" width="8" height="8" fill="#ff2d2d"/>
+        <rect x="2" y="22" width="14" height="8" fill="#ff2d2d"/>
+        <rect x="2" y="32" width="8" height="8" fill="#ff2d2d"/>
+        <rect x="28" y="2" width="8" height="38" fill="#ffd447"/>
+        <rect x="40" y="2" width="8" height="38" fill="#50d6ff"/>
+        <rect x="52" y="8" width="40" height="8" fill="#57ff9a"/>
+        <rect x="60" y="18" width="28" height="8" fill="#57ff9a"/>
+        <rect x="68" y="28" width="20" height="8" fill="#57ff9a"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Fantasy F1 2026, Sponsored by Modelo</h1>
+      <p class="marquee">"In Fantasy F1...if the drivers you pick score the most points...you win Fantasy F1" -Will Buxton (probably)</p>
+    </div>
+    <div class="pixel-icon beer-can" aria-hidden="true">
+      <svg viewBox="0 0 56 72" xmlns="http://www.w3.org/2000/svg" role="img">
+        <rect x="10" y="2" width="36" height="6" fill="#dfe8f4"/>
+        <rect x="8" y="8" width="40" height="56" fill="#f8fbff"/>
+        <rect x="10" y="64" width="36" height="6" fill="#c9d8ea"/>
+        <rect x="12" y="18" width="32" height="6" fill="#10335d"/>
+        <rect x="12" y="24" width="32" height="8" fill="#f4c33d"/>
+        <rect x="12" y="34" width="32" height="18" fill="#10335d"/>
+        <rect x="14" y="38" width="28" height="10" fill="#f4c33d"/>
+      </svg>
+    </div>
+  </header>
+  <div class="pit-strip panel">
+    <div class="pit-lights" aria-hidden="true">
+      <span class="pit-light l1"></span>
+      <span class="pit-light l2"></span>
+      <span class="pit-light l3"></span>
+      <span class="pit-light l4"></span>
+      <span class="pit-light l5"></span>
+      <span class="pit-light l6"></span>
+      <span class="pit-light l7"></span>
+      <span class="pit-light l8"></span>
+      <span class="pit-light l9"></span>
+      <span class="pit-light l10"></span>
+    </div>
+  </div>
+
+  <main class="layout">
+    <section class="panel scoreboard">
+      <h2>Scoreboard</h2>
+      <p class="tiny">Points: 1st = 22 ... 22nd = 1, DNF = 0</p>
+      <div id="mega-board" class="mega-board"></div>
+      <div id="scoreboard-wrap"></div>
+    </section>
+
+    <section class="panel race-panel">
+      <h2>Race Results</h2>
+      <p class="tiny">2026 calendar preloaded (24 rounds). Enter all drivers for each round.</p>
+
+      <div id="race-controls" class="inline-form two"></div>
+      <div class="online-tools">
+        <label class="tiny" for="pull-race-select">Pull 2026 Schedule + Results</label>
+        <div class="inline-form two">
+          <select id="pull-race-select" aria-label="Select 2026 race"></select>
+          <button id="pull-results-btn" type="button">Pull Results Online</button>
+        </div>
+        <p id="pull-status" class="tiny status-msg"></p>
+      </div>
+      <div id="race-entry" class="race-entry"></div>
+    </section>
+
+    <section class="panel setup">
+      <h2>League Roster Dashboard</h2>
+
+      <form id="team-form" class="stack">
+        <label for="team-name">Add Team</label>
+        <div class="inline-form">
+          <input id="team-name" name="teamName" type="text" maxlength="40" placeholder="Team Name" required />
+          <button type="submit">Add</button>
+        </div>
+      </form>
+
+      <form id="driver-form" class="stack">
+        <label for="driver-team">Add Driver (4 max per team)</label>
+        <div class="inline-form two">
+          <select id="driver-team" name="driverTeam" required></select>
+          <input id="driver-name" name="driverName" type="text" maxlength="40" placeholder="Driver Name" required />
+          <button type="submit">Add</button>
+        </div>
+      </form>
+
+      <div id="teams-wrap" class="teams-wrap"></div>
+
+      <div class="controls">
+        <button id="export-btn" type="button">Export League JSON</button>
+        <label class="import-label" for="import-file">Import JSON</label>
+        <input id="import-file" type="file" accept="application/json" />
+        <button id="reset-btn" type="button" class="danger">Reset League</button>
+      </div>
+    </section>
+  </main>
+
+  <template id="team-card-template">
+    <article class="team-card">
+      <div class="team-header">
+        <h3></h3>
+        <button type="button" class="danger small remove-team">Delete Team</button>
+      </div>
+      <ul class="driver-list"></ul>
+    </article>
+  </template>
+
+  <script src="./app.js"></script>
+</body>
+</html>

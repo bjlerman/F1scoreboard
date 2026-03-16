@@ -83,6 +83,19 @@ const state = {
   races: [],
   scheduleSynced: false
 };
+const PAGE_KEYS = ["scoreboard", "league-roster", "race-results", "season-summary"];
+const TEAM_COLORS = [
+  "#ff5e5e",
+  "#50d6ff",
+  "#57ff9a",
+  "#ffdc58",
+  "#ff66cc",
+  "#8ad1ff",
+  "#ffa769",
+  "#a9ff57",
+  "#ffd1ff",
+  "#8dffd9"
+];
 
 const els = {
   teamForm: document.getElementById("team-form"),
@@ -101,6 +114,9 @@ const els = {
   raceEntry: document.getElementById("race-entry"),
   megaBoard: document.getElementById("mega-board"),
   scoreboardWrap: document.getElementById("scoreboard-wrap"),
+  seasonSummaryWrap: document.getElementById("season-summary-wrap"),
+  pagePanels: [...document.querySelectorAll(".page-panel")],
+  bannerButtons: [...document.querySelectorAll(".banner-btn")],
   exportBtn: document.getElementById("export-btn"),
   importFile: document.getElementById("import-file"),
   resetBtn: document.getElementById("reset-btn")
@@ -243,6 +259,30 @@ function pointsForFinish(value) {
 
 function save() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+function normalizePageKey(value) {
+  const key = String(value || "").trim().toLowerCase();
+  if (PAGE_KEYS.includes(key)) return key;
+  return "scoreboard";
+}
+
+function pageKeyFromHash() {
+  const raw = String(window.location.hash || "").replace(/^#/, "");
+  return normalizePageKey(raw);
+}
+
+function activatePage(pageKey, updateHash = true) {
+  const nextKey = normalizePageKey(pageKey);
+  els.pagePanels.forEach((panel) => {
+    panel.classList.toggle("active", panel.dataset.page === nextKey);
+  });
+  els.bannerButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.page === nextKey);
+  });
+  if (updateHash && window.location.hash !== `#${nextKey}`) {
+    window.location.hash = nextKey;
+  }
 }
 
 function load() {
@@ -798,7 +838,7 @@ function saveRaceResultsFromForm() {
 
   race.results = results;
   save();
-  renderScoreboard();
+  renderAll();
 }
 
 function parseRaceResultsPayload(payload) {
@@ -1005,6 +1045,261 @@ function renderMegaBoard(board) {
   `;
 }
 
+function racesByRound() {
+  return [...state.races]
+    .map((race, index) => ({ race, index, round: roundFromRaceName(race.name) }))
+    .sort((a, b) => {
+      const aRound = Number.isInteger(a.round) ? a.round : Number.MAX_SAFE_INTEGER;
+      const bRound = Number.isInteger(b.round) ? b.round : Number.MAX_SAFE_INTEGER;
+      return aRound - bRound || a.index - b.index;
+    })
+    .map((entry) => entry.race);
+}
+
+function shortRoundLabel(raceName, index) {
+  const round = roundFromRaceName(raceName);
+  if (Number.isInteger(round)) return `R${String(round).padStart(2, "0")}`;
+  return `R${String(index + 1).padStart(2, "0")}`;
+}
+
+function seasonSnapshots() {
+  const teams = [...state.teams];
+  if (!teams.length) return [];
+
+  const orderedRaces = racesByRound();
+  const snapshots = [];
+  const totals = new Map(teams.map((team) => [team.id, 0]));
+
+  orderedRaces.forEach((race, index) => {
+    const hasResults = race?.results && Object.keys(race.results).length > 0;
+    if (!hasResults) return;
+
+    teams.forEach((team) => {
+      const prev = totals.get(team.id) || 0;
+      totals.set(team.id, prev + teamPointsForRace(team, race));
+    });
+
+    const ranking = [...teams]
+      .map((team) => ({ teamId: team.id, points: totals.get(team.id) || 0, name: team.name }))
+      .sort((a, b) => b.points - a.points || a.name.localeCompare(b.name));
+
+    const positions = new Map();
+    ranking.forEach((row, rankIndex) => {
+      positions.set(row.teamId, rankIndex + 1);
+    });
+
+    const points = new Map(ranking.map((row) => [row.teamId, row.points]));
+    snapshots.push({
+      raceName: race.name,
+      raceLabel: shortRoundLabel(race.name, index),
+      positions,
+      points
+    });
+  });
+
+  return snapshots;
+}
+
+function pointForChart(index, value, count, minY, maxY, width, height) {
+  const xRange = width;
+  const yRange = height;
+  const x = count <= 1 ? 0 : (index / (count - 1)) * xRange;
+  const y = minY === maxY ? yRange / 2 : ((value - minY) / (maxY - minY)) * yRange;
+  return { x, y };
+}
+
+function teamNameSizeClass(teamName) {
+  const length = String(teamName || "").trim().length;
+  if (length >= 56) return "is-tight";
+  if (length >= 38) return "is-compact";
+  return "";
+}
+
+function renderSeasonSummary() {
+  if (!els.seasonSummaryWrap) return;
+  if (!state.teams.length) {
+    els.seasonSummaryWrap.innerHTML = '<p class="empty">Add teams to unlock the season summary.</p>';
+    return;
+  }
+
+  const snapshots = seasonSnapshots();
+  if (!snapshots.length) {
+    els.seasonSummaryWrap.innerHTML = '<p class="empty">Enter race results to plot race-by-race trends.</p>';
+    return;
+  }
+
+  const teamRows = computeScoreboard();
+  const colorByTeamId = new Map(
+    teamRows.map((row, idx) => [row.teamId, TEAM_COLORS[idx % TEAM_COLORS.length]])
+  );
+  const labels = snapshots.map((s) => s.raceLabel);
+  const count = snapshots.length;
+
+  const positionSeries = state.teams.map((team) => {
+    const values = snapshots.map((snap) => snap.positions.get(team.id) || state.teams.length);
+    return { team, values };
+  });
+  const pointSeries = state.teams.map((team) => {
+    const values = snapshots.map((snap) => snap.points.get(team.id) || 0);
+    return { team, values };
+  });
+
+  const positionRows = positionSeries
+    .map(({ team, values }) => {
+      const points = values
+        .map((value, index) => {
+          const p = pointForChart(index, value, count, 1, state.teams.length, 900, 260);
+          return `${p.x.toFixed(1)},${p.y.toFixed(1)}`;
+        })
+        .join(" ");
+      const lastValue = values[values.length - 1];
+      const color = colorByTeamId.get(team.id) || "#ffffff";
+      return `
+        <polyline class="trend-line" points="${points}" stroke="${color}" fill="none"></polyline>
+        <circle cx="${pointForChart(count - 1, lastValue, count, 1, state.teams.length, 900, 260).x.toFixed(1)}"
+                cy="${pointForChart(count - 1, lastValue, count, 1, state.teams.length, 900, 260).y.toFixed(1)}"
+                r="5.2" fill="${color}"></circle>
+      `;
+    })
+    .join("");
+
+  const maxPoints = Math.max(1, ...pointSeries.flatMap((series) => series.values));
+  const pointRows = pointSeries
+    .map(({ team, values }) => {
+      const points = values
+        .map((value, index) => {
+          const p = pointForChart(index, value, count, 0, maxPoints, 900, 260);
+          return `${p.x.toFixed(1)},${(260 - p.y).toFixed(1)}`;
+        })
+        .join(" ");
+      const lastValue = values[values.length - 1];
+      const lastPoint = pointForChart(count - 1, lastValue, count, 0, maxPoints, 900, 260);
+      const color = colorByTeamId.get(team.id) || "#ffffff";
+      return `
+        <polyline class="trend-line" points="${points}" stroke="${color}" fill="none"></polyline>
+        <rect x="${(lastPoint.x - 6).toFixed(1)}" y="${(260 - lastPoint.y - 6).toFixed(1)}" width="12" height="12" fill="${color}"></rect>
+      `;
+    })
+    .join("");
+
+  const xTicks = labels
+    .map((label, index) => {
+      const x = pointForChart(index, 0, count, 0, 1, 900, 1).x.toFixed(1);
+      return `<text x="${x}" y="294" class="axis-label">${label}</text>`;
+    })
+    .join("");
+
+  const positionTicks = Array.from({ length: state.teams.length }, (_, i) => i + 1)
+    .map((value) => {
+      const y = pointForChart(0, value, 1, 1, state.teams.length, 900, 260).y.toFixed(1);
+      return `<text x="-16" y="${y}" class="axis-label axis-left">P${value}</text>`;
+    })
+    .join("");
+
+  const pointsTicks = [0, Math.ceil(maxPoints * 0.25), Math.ceil(maxPoints * 0.5), Math.ceil(maxPoints * 0.75), maxPoints]
+    .map((value) => {
+      const y = (260 - pointForChart(0, value, 1, 0, maxPoints, 900, 260).y).toFixed(1);
+      return `<text x="-16" y="${y}" class="axis-label axis-left">${value}</text>`;
+    })
+    .join("");
+
+  const leader = teamRows[0];
+  const latestRace = snapshots[snapshots.length - 1];
+  const positionTeamLabels = teamRows
+    .map((row) => {
+      const latestPos = latestRace.positions.get(row.teamId);
+      const color = colorByTeamId.get(row.teamId) || "#ffffff";
+      const nameSizeClass = teamNameSizeClass(row.teamName);
+      return `
+        <li class="chart-team-item">
+          <span class="summary-team-car" style="--team-color:${color};"></span>
+          <span class="chart-team-name ${nameSizeClass}">${row.teamName}</span>
+          <span class="chart-team-meta">P${latestPos}</span>
+        </li>
+      `;
+    })
+    .join("");
+
+  const pointsTeamLabels = teamRows
+    .map((row) => {
+      const latestPts = latestRace.points.get(row.teamId) || 0;
+      const color = colorByTeamId.get(row.teamId) || "#ffffff";
+      const nameSizeClass = teamNameSizeClass(row.teamName);
+      return `
+        <li class="chart-team-item">
+          <span class="summary-team-car" style="--team-color:${color};"></span>
+          <span class="chart-team-name ${nameSizeClass}">${row.teamName}</span>
+          <span class="chart-team-meta">${latestPts} pts</span>
+        </li>
+      `;
+    })
+    .join("");
+
+  els.seasonSummaryWrap.innerHTML = `
+    <section class="summary-hero">
+      <div class="summary-stat">
+        <span>Current Leader</span>
+        <strong>${leader ? leader.teamName : "--"}</strong>
+      </div>
+      <div class="summary-stat">
+        <span>Races Logged</span>
+        <strong>${snapshots.length}</strong>
+      </div>
+      <div class="summary-stat">
+        <span>Latest Round</span>
+        <strong>${latestRace.raceLabel} ${latestRace.raceName.replace(/^R\d{1,2}\s*/i, "")}</strong>
+      </div>
+    </section>
+    <section class="retro-chart-grid">
+      <article class="chart-card">
+        <h3>Position Tracker</h3>
+        <div class="chart-body">
+          <svg class="summary-svg" viewBox="-48 -12 960 324" role="img" aria-label="Team positions by race">
+            <rect x="0" y="0" width="900" height="260" class="chart-bg"></rect>
+            <g class="grid-lines">
+              ${Array.from({ length: state.teams.length }, (_, i) => {
+                const y = pointForChart(0, i + 1, 1, 1, state.teams.length, 900, 260).y.toFixed(1);
+                return `<line x1="0" y1="${y}" x2="900" y2="${y}"></line>`;
+              }).join("")}
+            </g>
+            <line x1="0" y1="260" x2="900" y2="260" class="axis-line"></line>
+            <line x1="0" y1="0" x2="0" y2="260" class="axis-line"></line>
+            ${positionRows}
+            ${xTicks}
+            ${positionTicks}
+          </svg>
+          <aside class="chart-team-list" aria-label="Team list for position tracker">
+            <ul>${positionTeamLabels}</ul>
+          </aside>
+        </div>
+      </article>
+      <article class="chart-card">
+        <h3>Points Race</h3>
+        <div class="chart-body">
+          <svg class="summary-svg" viewBox="-48 -12 960 324" role="img" aria-label="Cumulative points by race">
+            <rect x="0" y="0" width="900" height="260" class="chart-bg"></rect>
+            <g class="grid-lines">
+              ${Array.from({ length: 5 }, (_, i) => {
+                const value = Math.round((i / 4) * maxPoints);
+                const y = (260 - pointForChart(0, value, 1, 0, maxPoints, 900, 260).y).toFixed(1);
+                return `<line x1="0" y1="${y}" x2="900" y2="${y}"></line>`;
+              }).join("")}
+            </g>
+            <line x1="0" y1="260" x2="900" y2="260" class="axis-line"></line>
+            <line x1="0" y1="0" x2="0" y2="260" class="axis-line"></line>
+            ${pointRows}
+            ${xTicks}
+            ${pointsTicks}
+          </svg>
+          <aside class="chart-team-list" aria-label="Team list for points race">
+            <ul>${pointsTeamLabels}</ul>
+          </aside>
+        </div>
+      </article>
+    </section>
+  `;
+}
+
 function exportLeague() {
   const blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
@@ -1084,6 +1379,7 @@ function renderAll() {
   renderPullRaceSelect();
   renderRaceEntry();
   renderScoreboard();
+  renderSeasonSummary();
 }
 
 els.teamForm.addEventListener("submit", (event) => {
@@ -1153,6 +1449,14 @@ if (els.pullRaceSelect) {
     }
   });
 }
+els.bannerButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    activatePage(button.dataset.page, true);
+  });
+});
+window.addEventListener("hashchange", () => {
+  activatePage(pageKeyFromHash(), false);
+});
 
 async function bootstrap() {
   load();
@@ -1166,6 +1470,7 @@ async function bootstrap() {
   }
 
   renderAll();
+  activatePage(pageKeyFromHash(), false);
   sync2026ScheduleFromApi();
 }
 

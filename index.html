@@ -53,31 +53,22 @@
     </div>
   </div>
 
+  <nav class="panel banner-nav" aria-label="League pages">
+    <button type="button" class="banner-btn" data-page="scoreboard">Scoreboard</button>
+    <button type="button" class="banner-btn" data-page="league-roster">League Roster</button>
+    <button type="button" class="banner-btn" data-page="season-summary">Season Summary</button>
+    <button type="button" class="banner-btn" data-page="race-results">Race Results</button>
+  </nav>
+
   <main class="layout">
-    <section class="panel scoreboard">
+    <section class="panel scoreboard page-panel" data-page="scoreboard">
       <h2>Scoreboard</h2>
       <p class="tiny">Points: 1st = 22 ... 22nd = 1, DNF = 0</p>
       <div id="mega-board" class="mega-board"></div>
       <div id="scoreboard-wrap"></div>
     </section>
 
-    <section class="panel race-panel">
-      <h2>Race Results</h2>
-      <p class="tiny">2026 calendar preloaded (24 rounds). Enter all drivers for each round.</p>
-
-      <div id="race-controls" class="inline-form two"></div>
-      <div class="online-tools">
-        <label class="tiny" for="pull-race-select">Pull 2026 Schedule + Results</label>
-        <div class="inline-form two">
-          <select id="pull-race-select" aria-label="Select 2026 race"></select>
-          <button id="pull-results-btn" type="button">Pull Results Online</button>
-        </div>
-        <p id="pull-status" class="tiny status-msg"></p>
-      </div>
-      <div id="race-entry" class="race-entry"></div>
-    </section>
-
-    <section class="panel setup">
+    <section class="panel setup page-panel" data-page="league-roster">
       <h2>League Roster Dashboard</h2>
 
       <form id="team-form" class="stack">
@@ -105,6 +96,28 @@
         <input id="import-file" type="file" accept="application/json" />
         <button id="reset-btn" type="button" class="danger">Reset League</button>
       </div>
+    </section>
+
+    <section class="panel race-panel page-panel" data-page="race-results">
+      <h2>Race Results</h2>
+      <p class="tiny">2026 calendar preloaded (24 rounds). Enter all drivers for each round.</p>
+
+      <div id="race-controls" class="inline-form two"></div>
+      <div class="online-tools">
+        <label class="tiny" for="pull-race-select">Pull 2026 Schedule + Results</label>
+        <div class="inline-form two">
+          <select id="pull-race-select" aria-label="Select 2026 race"></select>
+          <button id="pull-results-btn" type="button">Pull Results Online</button>
+        </div>
+        <p id="pull-status" class="tiny status-msg"></p>
+      </div>
+      <div id="race-entry" class="race-entry"></div>
+    </section>
+
+    <section class="panel season-summary page-panel" data-page="season-summary">
+      <h2>Season Summary</h2>
+      <p class="tiny">Retro race-by-race trend view of league positions and cumulative team points.</p>
+      <div id="season-summary-wrap" class="season-summary-wrap"></div>
     </section>
   </main>
 

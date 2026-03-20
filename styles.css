@@ -820,9 +820,40 @@ button.small {
 .mega-row {
   display: grid;
   grid-template-columns: clamp(30px, 7vw, 44px) 1fr;
-  align-items: center;
+  align-items: start;
   gap: 0.55rem;
   margin-bottom: 0.5rem;
+}
+
+.mega-content {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.mega-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.4rem;
+  align-items: start;
+}
+
+.mega-team {
+  color: #fff;
+  font-size: clamp(0.66rem, 1.6vw, 0.95rem);
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.mega-points {
+  color: #041810;
+  background: #57ff9a;
+  border: 1px solid #000;
+  padding: 0.14rem 0.34rem;
+  font-size: clamp(0.62rem, 1.4vw, 0.8rem);
+  font-weight: 900;
+  white-space: nowrap;
 }
 
 .mega-rank {
@@ -840,6 +871,7 @@ button.small {
   border: 1px solid #000;
   height: clamp(22px, 4.4vw, 28px);
   position: relative;
+  overflow: hidden;
 }
 
 .mega-fill {
@@ -1030,6 +1062,31 @@ button.small {
     grid-template-columns: 24px minmax(0, 1fr) 46px 58px 60px;
     gap: 0.3rem;
     padding: 0.3rem;
+  }
+
+  .mega-row {
+    grid-template-columns: 26px minmax(0, 1fr);
+    gap: 0.38rem;
+  }
+
+  .mega-rank {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.05rem;
+  }
+
+  .mega-meta {
+    grid-template-columns: 1fr;
+    gap: 0.22rem;
+  }
+
+  .mega-team {
+    font-size: 0.7rem;
+    line-height: 1.15;
+  }
+
+  .mega-points {
+    justify-self: start;
+    font-size: 0.62rem;
   }
 
   .roster-team-name {

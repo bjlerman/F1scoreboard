@@ -1,6 +1,8 @@
 const STORAGE_KEY = "retro_f1_fantasy_v1";
 const MAX_DRIVERS_PER_TEAM = 4;
 const ONLINE_SEASON = 2026;
+const FULL_SEASON_ROUND_COUNT_2026 = 24;
+const CANCELLED_ROUNDS_2026 = new Set([4, 5]);
 const DEFAULT_LEAGUE_JSON_PATH = "./f1_fantasy_league_2026.json";
 const SCHEDULE_ENDPOINTS_2026 = [
   `https://api.jolpi.ca/ergast/f1/${ONLINE_SEASON}.json`,
@@ -11,8 +13,6 @@ const PRELOADED_2026_RACES = [
   "R01 Australia GP (Melbourne)",
   "R02 China GP (Shanghai)",
   "R03 Japan GP (Suzuka)",
-  "R04 Bahrain GP (Sakhir)",
-  "R05 Saudi Arabia GP (Jeddah)",
   "R06 Miami GP",
   "R07 Emilia Romagna GP (Imola)",
   "R08 Monaco GP",
@@ -140,6 +140,27 @@ function roundFromRaceName(name) {
   return Number(match[1]);
 }
 
+function isCancelledRound(round) {
+  return Number.isInteger(round) && CANCELLED_ROUNDS_2026.has(round);
+}
+
+function removeCancelledRaces(list) {
+  const races = Array.isArray(list) ? list : [];
+  const rounds = new Set(races.map((race) => roundFromRaceName(race?.name)).filter((round) => Number.isInteger(round)));
+  if (rounds.size < FULL_SEASON_ROUND_COUNT_2026) return races;
+  return races.filter((race) => {
+    const round = roundFromRaceName(race?.name);
+    return !isCancelledRound(round);
+  });
+}
+
+function removeCancelledScheduleRows(list) {
+  const rows = Array.isArray(list) ? list : [];
+  const rounds = new Set(rows.map((row) => Number(row?.round)).filter((round) => Number.isInteger(round)));
+  if (rounds.size < FULL_SEASON_ROUND_COUNT_2026) return rows;
+  return rows.filter((row) => !isCancelledRound(Number(row?.round)));
+}
+
 function raceByRound(round) {
   return state.races.find((race) => roundFromRaceName(race.name) === Number(round)) || null;
 }
@@ -193,13 +214,14 @@ function parseSchedulePayload(payload) {
 }
 
 function mergeScheduleIntoState(scheduleRows) {
-  if (!scheduleRows.length) return;
+  const activeScheduleRows = removeCancelledScheduleRows(scheduleRows);
+  if (!activeScheduleRows.length) return;
 
   const existingByRound = new Map(
     state.races.map((race) => [roundFromRaceName(race.name), race]).filter(([round]) => round !== null)
   );
 
-  state.races = scheduleRows.map((row) => {
+  state.races = activeScheduleRows.map((row) => {
     const existing = existingByRound.get(row.round);
     return {
       id: existing?.id || uid("race"),
@@ -292,7 +314,7 @@ function load() {
     const parsed = JSON.parse(raw);
     if (Array.isArray(parsed.teams) && Array.isArray(parsed.races)) {
       state.teams = parsed.teams;
-      state.races = parsed.races;
+      state.races = removeCancelledRaces(parsed.races);
     }
   } catch (_err) {
     // ignore corrupted storage and start fresh
@@ -1026,9 +1048,14 @@ function renderMegaBoard(board) {
       return `
         <div class="mega-row">
           <div class="mega-rank">${idx + 1}</div>
-          <div class="mega-track">
-            <div class="mega-fill" style="width:${pct}%"></div>
-            <div class="mega-label">${row.teamName} :: ${row.points} pts</div>
+          <div class="mega-content">
+            <div class="mega-meta">
+              <span class="mega-team">${row.teamName}</span>
+              <span class="mega-points">${row.points} pts</span>
+            </div>
+            <div class="mega-track">
+              <div class="mega-fill" style="width:${pct}%"></div>
+            </div>
           </div>
         </div>
       `;
@@ -1317,7 +1344,7 @@ function hasValidLeagueShape(parsed) {
 function applyLeagueState(parsed) {
   if (!hasValidLeagueShape(parsed)) return false;
   state.teams = parsed.teams;
-  state.races = parsed.races;
+  state.races = removeCancelledRaces(parsed.races);
   normalizeRaceResultsToDriverNames();
   save();
   return true;

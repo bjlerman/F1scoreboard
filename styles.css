@@ -44,7 +44,7 @@ body {
 }
 
 .title-bar {
-  margin: 1rem;
+  margin: clamp(0.65rem, 2vw, 1rem);
   text-align: center;
 }
 
@@ -73,24 +73,24 @@ h1 {
 
 .marquee {
   margin: 0.65rem 0 0;
-  font-size: 1.98rem;
+  font-size: clamp(0.9rem, 3.6vw, 1.98rem);
   font-weight: 900;
   color: #000;
   background: var(--accent);
   border: 2px solid #fff;
   box-shadow: 2px 2px 0 #000;
-  padding: 0.9rem 1rem;
+  padding: clamp(0.5rem, 1.4vw, 0.9rem) clamp(0.6rem, 2vw, 1rem);
   line-height: 1.15;
   animation: blinkText 1.6s steps(2, start) infinite;
 }
 
 .pit-strip {
-  margin: 0 1rem 1rem;
+  margin: 0 clamp(0.65rem, 2vw, 1rem) clamp(0.65rem, 2vw, 1rem);
   padding: 0.5rem 0.75rem;
 }
 
 .banner-nav {
-  margin: 0 1rem 1rem;
+  margin: 0 clamp(0.65rem, 2vw, 1rem) clamp(0.65rem, 2vw, 1rem);
   padding: 0.65rem;
 }
 
@@ -101,8 +101,8 @@ h1 {
 }
 
 .banner-btn {
-  min-height: 56px;
-  font-size: 0.84rem;
+  min-height: clamp(42px, 6vw, 56px);
+  font-size: clamp(0.68rem, 1.8vw, 0.84rem);
   font-weight: 900;
   letter-spacing: 0.6px;
   text-transform: uppercase;
@@ -131,13 +131,14 @@ h1 {
 
 .pit-lights {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(clamp(26px, 5vw, 44px), 1fr));
   gap: 0.35rem;
 }
 
 .pit-light {
-  width: 54px;
-  height: 54px;
+  width: clamp(24px, 5vw, 54px);
+  aspect-ratio: 1 / 1;
+  height: auto;
   justify-self: center;
   border: 2px solid #000;
   border-radius: 50%;
@@ -157,8 +158,8 @@ h1 {
 .pit-light.l10 { animation: pitPulse 3.2s steps(2, start) infinite; animation-delay: 1.8s; }
 
 .pixel-icon {
-  width: 108px;
-  height: 108px;
+  width: clamp(62px, 11vw, 108px);
+  height: clamp(62px, 11vw, 108px);
   border: 2px solid #fff;
   background: #090114;
   box-shadow: 0 0 0 3px #000;
@@ -195,14 +196,14 @@ h3 {
   border: 3px solid var(--line);
   box-shadow: 0 0 0 4px #000, 0 0 18px rgba(127, 232, 255, 0.24);
   border-radius: 2px;
-  padding: 1rem;
+  padding: clamp(0.7rem, 2vw, 1rem);
   position: relative;
   z-index: 3;
 }
 
 .layout {
   display: block;
-  margin: 1rem;
+  margin: clamp(0.65rem, 2vw, 1rem);
 }
 
 .page-panel {
@@ -280,7 +281,7 @@ h3 {
 
 .chart-body {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 320px);
   gap: 0.9rem;
   align-items: start;
 }
@@ -478,7 +479,7 @@ button.small {
 .teams-wrap {
   display: grid;
   gap: 0.9rem;
-  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
   max-height: none;
   overflow: visible;
   padding-right: 0;
@@ -715,6 +716,7 @@ button.small {
   margin-top: 0.8rem;
   max-height: 60vh;
   overflow: auto;
+  overflow-x: auto;
 }
 
 .online-tools {
@@ -736,8 +738,9 @@ button.small {
 
 .race-table {
   width: 100%;
+  min-width: 560px;
   border-collapse: collapse;
-  font-size: 0.62rem;
+  font-size: clamp(0.62rem, 1.6vw, 0.72rem);
 }
 
 .race-table th,
@@ -752,8 +755,9 @@ button.small {
 
 .scoreboard table {
   width: 100%;
+  min-width: 680px;
   border-collapse: collapse;
-  font-size: 1.24rem;
+  font-size: clamp(0.8rem, 2.1vw, 1.24rem);
 }
 
 .scoreboard th,
@@ -772,12 +776,13 @@ button.small {
   border: 3px solid #fff;
   box-shadow: inset 0 0 0 4px #000;
   background: #050812;
-  padding: 0.8rem;
+  padding: clamp(0.5rem, 1.4vw, 0.8rem);
   margin-bottom: 0.8rem;
+  overflow-x: auto;
 }
 
 .mega-head {
-  font-size: 1.28rem;
+  font-size: clamp(0.86rem, 2.6vw, 1.28rem);
   font-weight: 800;
   color: #fff;
   margin-bottom: 0.75rem;
@@ -785,14 +790,14 @@ button.small {
 
 .season-lights {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
   gap: 0.2rem;
   margin-bottom: 0.8rem;
 }
 
 .lamp {
   text-align: center;
-  font-size: 1rem;
+  font-size: clamp(0.62rem, 1.8vw, 1rem);
   font-weight: 700;
   color: #000;
   background: #334;
@@ -814,7 +819,7 @@ button.small {
 
 .mega-row {
   display: grid;
-  grid-template-columns: 44px 1fr;
+  grid-template-columns: clamp(30px, 7vw, 44px) 1fr;
   align-items: center;
   gap: 0.55rem;
   margin-bottom: 0.5rem;
@@ -825,7 +830,7 @@ button.small {
   background: var(--accent);
   border: 1px solid #000;
   text-align: center;
-  font-size: 1.08rem;
+  font-size: clamp(0.8rem, 2vw, 1.08rem);
   font-weight: 900;
   padding: 0.26rem 0.1rem;
 }
@@ -833,7 +838,7 @@ button.small {
 .mega-track {
   background: #101b30;
   border: 1px solid #000;
-  height: 28px;
+  height: clamp(22px, 4.4vw, 28px);
   position: relative;
 }
 
@@ -844,10 +849,10 @@ button.small {
 
 .mega-label {
   position: absolute;
-  top: 5px;
+  top: clamp(2px, 1vw, 5px);
   left: 6px;
   right: 6px;
-  font-size: 1rem;
+  font-size: clamp(0.65rem, 2vw, 1rem);
   font-weight: 700;
   color: #fff;
   text-shadow: 1px 1px 0 #000;
@@ -858,7 +863,7 @@ button.small {
 
 .car-lane {
   margin-top: 1rem;
-  height: 30px;
+  height: clamp(24px, 4.8vw, 30px);
   border: 1px solid #000;
   background: repeating-linear-gradient(
     90deg,
@@ -873,9 +878,9 @@ button.small {
 
 .pixel-car {
   position: absolute;
-  top: 5px;
-  width: 28px;
-  height: 16px;
+  top: clamp(2px, 0.8vw, 5px);
+  width: clamp(22px, 4vw, 28px);
+  height: clamp(12px, 2.5vw, 16px);
   left: var(--car-left, 0%);
   transform: translateX(-50%);
   transition: left 0.35s steps(6, end);
@@ -940,7 +945,17 @@ button.small {
   font-size: 0.65rem;
 }
 
+#scoreboard-wrap {
+  overflow-x: auto;
+}
+
 @media (max-width: 1100px) {
+  .masthead {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
   .banner-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -974,7 +989,32 @@ button.small {
 }
 
 @media (max-width: 640px) {
+  .title-bar,
+  .pit-strip,
+  .banner-nav,
+  .layout {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
   .banner-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-btn {
+    min-height: 40px;
+  }
+
+  .pixel-icon.beer-can {
+    display: none;
+  }
+
+  .pit-lights {
+    gap: 0.25rem;
+  }
+
+  .inline-form,
+  .inline-form.two {
     grid-template-columns: 1fr;
   }
 
@@ -987,11 +1027,23 @@ button.small {
   }
 
   .roster-driver-row {
-    grid-template-columns: 28px 1fr 56px 72px 80px;
+    grid-template-columns: 24px minmax(0, 1fr) 46px 58px 60px;
+    gap: 0.3rem;
+    padding: 0.3rem;
   }
 
   .roster-team-name {
     font-size: 0.92rem;
+  }
+
+  .roster-driver-name {
+    font-size: 0.78rem;
+  }
+
+  .finish-badge,
+  .driver-avg,
+  .draft-value {
+    font-size: 0.66rem;
   }
 
   .chart-team-item {

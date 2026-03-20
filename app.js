@@ -96,6 +96,16 @@ const TEAM_COLORS = [
   "#ffd1ff",
   "#8dffd9"
 ];
+const TEAM_LOGO_FILES = {
+  kaiserpermanentedepartmentofbillustrationracingteamfueledbylittledebbie: "./TeamLogos/kaiser_billustration_racing_logo.svg",
+  frictionlabsmellowsendoutdoorboulderf1team: "./TeamLogos/friction_labs_mellow_send_logo.svg",
+  thenanobananaproracingcopyrightviolationspresentedbyaskjeeves: "./TeamLogos/nano_banana_pro_racing_logo.svg",
+  scuderiaalbertooonipropizzaracing: "./TeamLogos/scuderia_alberto_ooni_logo.svg",
+  maxwellhouseespressomartinif1team: "./TeamLogos/maxwell_house_espresso_martini_f1_logo.svg",
+  thebadboyracingmowersanexperimentinmotorsportpoweredbyclippyai: "./TeamLogos/bad_boy_racing_mowers_clippy_logo.svg",
+  entertainment720benjaminlermancheezitf1team: "./TeamLogos/entertainment_720_cheezit_f1_logo.svg",
+  scuderiavisacashappyogapants: "./TeamLogos/scuderia_visa_cash_app_yoga_pants_logo.svg"
+};
 
 const els = {
   teamForm: document.getElementById("team-form"),
@@ -126,12 +136,81 @@ function uid(prefix) {
   return `${prefix}_${Math.random().toString(36).slice(2, 10)}`;
 }
 
+function logoEntries() {
+  return Object.entries(TEAM_LOGO_FILES);
+}
+
 function normalizeName(value) {
   return String(value || "")
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]/g, "");
+}
+
+function teamLogoPath(teamName) {
+  const key = normalizeName(teamName);
+  if (TEAM_LOGO_FILES[key]) return TEAM_LOGO_FILES[key];
+
+  // Fallback: find best filename match by overlapping tokens.
+  const tokens = String(teamName || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .split(/\s+/)
+    .filter((token) => token.length >= 4);
+  let best = null;
+
+  logoEntries().forEach(([logoKey, path]) => {
+    let score = 0;
+    tokens.forEach((token) => {
+      if (logoKey.includes(token)) score += token.length;
+    });
+    if (!best || score > best.score) best = { path, score };
+  });
+
+  if (best && best.score >= 8) return best.path;
+  return null;
+}
+
+function ensureLogoLightbox() {
+  let box = document.getElementById("logo-lightbox");
+  if (box) return box;
+
+  box = document.createElement("div");
+  box.id = "logo-lightbox";
+  box.className = "logo-lightbox";
+  box.hidden = true;
+  box.innerHTML = `
+    <div class="logo-lightbox-backdrop" data-close="1"></div>
+    <div class="logo-lightbox-panel" role="dialog" aria-modal="true" aria-label="Enlarged team logo">
+      <h3 class="logo-lightbox-title">Drivers of the Day</h3>
+      <button type="button" class="logo-lightbox-close" data-close="1" aria-label="Close logo preview">Close</button>
+      <img class="logo-lightbox-img" alt="" />
+    </div>
+  `;
+  box.addEventListener("click", (event) => {
+    if (event.target?.dataset?.close === "1") box.hidden = true;
+  });
+  document.body.append(box);
+  return box;
+}
+
+function openLogoLightbox(src, altText) {
+  const box = ensureLogoLightbox();
+  const img = box.querySelector(".logo-lightbox-img");
+  const title = box.querySelector(".logo-lightbox-title");
+  if (!img) return;
+  if (title) title.textContent = "Drivers of the Day";
+  img.src = src;
+  img.alt = altText || "Team logo";
+  box.hidden = false;
+}
+
+function openDriversOfDayDefaultExpanded() {
+  const winnerBtn = document.querySelector(".winner-logo-btn");
+  const winnerImg = winnerBtn?.querySelector(".winner-logo-thumb");
+  if (!winnerImg?.src) return;
+  openLogoLightbox(winnerImg.src, winnerImg.alt || "Drivers of the Day logo");
 }
 
 function roundFromRaceName(name) {
@@ -304,6 +383,9 @@ function activatePage(pageKey, updateHash = true) {
   });
   if (updateHash && window.location.hash !== `#${nextKey}`) {
     window.location.hash = nextKey;
+  }
+  if (nextKey === "league-roster") {
+    openDriversOfDayDefaultExpanded();
   }
 }
 
@@ -565,6 +647,33 @@ function renderTeams() {
     const bPoints = teamPointsForRace(b, lastRace);
     return bPoints - aPoints || a.name.localeCompare(b.name);
   });
+
+  const winner = lastRace ? sortedTeams[0] || null : null;
+  const winnerLogo = winner ? teamLogoPath(winner.name) : null;
+  const winnerCard = document.createElement("article");
+  winnerCard.className = "roster-card winner-card";
+  winnerCard.innerHTML = `
+    <header class="roster-head">
+      <h3 class="roster-team-name">Drivers of the Day</h3>
+      <div class="roster-points">
+        <span>Week Winner</span>
+        <strong>${winner && lastRace ? teamPointsForRace(winner, lastRace) : 0} pts</strong>
+      </div>
+    </header>
+    <div class="winner-logo-wrap">
+      ${
+        winnerLogo
+          ? `<button type="button" class="winner-logo-btn" aria-label="Enlarge ${winner.name} logo"><img src="${winnerLogo}" alt="${winner.name} logo" class="winner-logo-thumb" /></button>`
+          : '<div class="winner-logo-missing">No logo found</div>'
+      }
+      <p class="winner-team-name">${winner?.name || "No winner yet"}</p>
+    </div>
+  `;
+  const winnerBtn = winnerCard.querySelector(".winner-logo-btn");
+  if (winnerBtn && winnerLogo && winner) {
+    winnerBtn.addEventListener("click", () => openLogoLightbox(winnerLogo, `${winner.name} logo`));
+  }
+  els.teamsWrap.append(winnerCard);
 
   sortedTeams.forEach((team) => {
     const card = document.createElement("article");

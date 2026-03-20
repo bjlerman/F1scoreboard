@@ -1,0 +1,245 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" shape-rendering="crispEdges">
+
+  <!-- Background - deep banana night -->
+  <rect width="512" height="512" fill="#1A1400"/>
+
+  <!-- Outer border - banana yellow -->
+  <rect x="8" y="8" width="496" height="496" fill="none" stroke="#FFD700" stroke-width="8"/>
+  <!-- Inner border - monokai purple (jeeves) -->
+  <rect x="20" y="20" width="472" height="472" fill="none" stroke="#6B2FA0" stroke-width="4"/>
+
+  <!-- Corner accents - banana yellow -->
+  <rect x="8" y="8" width="16" height="16" fill="#FFD700"/>
+  <rect x="24" y="8" width="8" height="8" fill="#FFD700"/>
+  <rect x="8" y="24" width="8" height="8" fill="#FFD700"/>
+
+  <rect x="488" y="8" width="16" height="16" fill="#FFD700"/>
+  <rect x="480" y="8" width="8" height="8" fill="#FFD700"/>
+  <rect x="488" y="24" width="8" height="8" fill="#FFD700"/>
+
+  <rect x="8" y="488" width="16" height="16" fill="#FFD700"/>
+  <rect x="24" y="496" width="8" height="8" fill="#FFD700"/>
+  <rect x="8" y="480" width="8" height="8" fill="#FFD700"/>
+
+  <rect x="488" y="488" width="16" height="16" fill="#FFD700"/>
+  <rect x="480" y="496" width="8" height="8" fill="#FFD700"/>
+  <rect x="488" y="480" width="8" height="8" fill="#FFD700"/>
+
+  <!-- ============================================ -->
+  <!-- PIXEL BANANA - big curved arc shape         -->
+  <!-- arcing left-to-right, classic crescent      -->
+  <!-- ============================================ -->
+
+  <!-- Banana tip left (stem end) -->
+  <rect x="100" y="192" width="8" height="8" fill="#8B6914"/>
+  <rect x="108" y="184" width="8" height="8" fill="#8B6914"/>
+  <rect x="116" y="176" width="8" height="8" fill="#A07820"/>
+  <rect x="124" y="172" width="8" height="12" fill="#C9A227"/>
+
+  <!-- Banana body - upper arc rows, curving right and downward -->
+  <rect x="132" y="168" width="16" height="12" fill="#FFD700"/>
+  <rect x="148" y="160" width="24" height="12" fill="#FFE033"/>
+  <rect x="172" y="156" width="32" height="12" fill="#FFE033"/>
+  <rect x="204" y="152" width="40" height="12" fill="#FFD700"/>
+  <rect x="244" y="152" width="40" height="12" fill="#FFE033"/>
+  <rect x="284" y="156" width="32" height="12" fill="#FFD700"/>
+  <rect x="316" y="160" width="24" height="12" fill="#FFE033"/>
+  <rect x="340" y="168" width="20" height="12" fill="#FFD700"/>
+  <rect x="360" y="176" width="16" height="12" fill="#FFE033"/>
+  <rect x="376" y="184" width="16" height="12" fill="#FFD700"/>
+  <rect x="392" y="196" width="12" height="12" fill="#C9A227"/>
+  <rect x="404" y="208" width="8" height="8" fill="#A07820"/>
+  <rect x="404" y="216" width="8" height="8" fill="#8B6914"/>
+
+  <!-- Banana body - middle rows (thickest part) -->
+  <rect x="124" y="180" width="16" height="12" fill="#FFE033"/>
+  <rect x="140" y="172" width="24" height="12" fill="#FFEC5C"/>
+  <rect x="164" y="168" width="40" height="12" fill="#FFEC5C"/>
+  <rect x="204" y="164" width="48" height="12" fill="#FFE033"/>
+  <rect x="252" y="164" width="48" height="12" fill="#FFEC5C"/>
+  <rect x="300" y="168" width="32" height="12" fill="#FFE033"/>
+  <rect x="332" y="172" width="28" height="12" fill="#FFEC5C"/>
+  <rect x="360" y="180" width="24" height="12" fill="#FFE033"/>
+  <rect x="384" y="192" width="16" height="12" fill="#C9A227"/>
+
+  <!-- Banana underbelly (darker yellow arc) -->
+  <rect x="132" y="192" width="16" height="12" fill="#C9A227"/>
+  <rect x="148" y="200" width="24" height="12" fill="#B8911E"/>
+  <rect x="172" y="208" width="40" height="12" fill="#C9A227"/>
+  <rect x="212" y="212" width="48" height="12" fill="#B8911E"/>
+  <rect x="260" y="212" width="40" height="12" fill="#C9A227"/>
+  <rect x="300" y="208" width="32" height="12" fill="#B8911E"/>
+  <rect x="332" y="200" width="28" height="12" fill="#C9A227"/>
+  <rect x="360" y="196" width="24" height="12" fill="#B8911E"/>
+
+  <!-- Banana highlight stripe (white-ish glint) -->
+  <rect x="160" y="164" width="8" height="8" fill="#FFFACD"/>
+  <rect x="200" y="156" width="8" height="8" fill="#FFFACD"/>
+  <rect x="248" y="156" width="8" height="8" fill="#FFFACD"/>
+  <rect x="296" y="160" width="8" height="8" fill="#FFFACD"/>
+  <rect x="336" y="168" width="8" height="8" fill="#FFFACD"/>
+
+  <!-- Banana freckles (ripe spots) -->
+  <rect x="176" y="176" width="8" height="8" fill="#A07820"/>
+  <rect x="220" y="168" width="8" height="8" fill="#8B6914"/>
+  <rect x="264" y="168" width="8" height="8" fill="#A07820"/>
+  <rect x="308" y="172" width="8" height="8" fill="#8B6914"/>
+  <rect x="216" y="184" width="8" height="8" fill="#A07820"/>
+  <rect x="268" y="180" width="8" height="8" fill="#8B6914"/>
+
+  <!-- ============================================ -->
+  <!-- JEEVES BUTLER - pixel art butler silhouette -->
+  <!-- tiny dude center below banana               -->
+  <!-- ============================================ -->
+
+  <!-- Head -->
+  <rect x="240" y="244" width="32" height="28" fill="#F5C9A0"/>
+  <!-- Hair / top hat -->
+  <rect x="236" y="228" width="40" height="8" fill="#222222"/>
+  <rect x="232" y="220" width="48" height="8" fill="#333333"/>
+  <rect x="240" y="208" width="32" height="12" fill="#222222"/>
+  <!-- Hat brim highlight -->
+  <rect x="232" y="220" width="48" height="4" fill="#444444"/>
+
+  <!-- Eyes -->
+  <rect x="248" y="252" width="6" height="6" fill="#222222"/>
+  <rect x="258" y="252" width="6" height="6" fill="#222222"/>
+  <!-- Monocle (Jeeves energy) -->
+  <rect x="258" y="250" width="10" height="10" fill="none" stroke="#FFD700" stroke-width="2"/>
+  <rect x="268" y="258" width="4" height="8" fill="#FFD700"/>
+
+  <!-- Moustache -->
+  <rect x="246" y="262" width="20" height="4" fill="#555544"/>
+
+  <!-- Collar / bow tie -->
+  <rect x="244" y="272" width="24" height="8" fill="#FFFFFF"/>
+  <rect x="252" y="274" width="8" height="6" fill="#333333"/>
+
+  <!-- Body - tailcoat (black with purple lapels) -->
+  <rect x="228" y="280" width="56" height="40" fill="#222222"/>
+  <!-- Lapels -->
+  <rect x="228" y="280" width="14" height="24" fill="#6B2FA0"/>
+  <rect x="270" y="280" width="14" height="24" fill="#6B2FA0"/>
+  <!-- Waistcoat -->
+  <rect x="242" y="280" width="28" height="40" fill="#F0F0F0"/>
+  <!-- Buttons -->
+  <rect x="254" y="288" width="4" height="4" fill="#333333"/>
+  <rect x="254" y="296" width="4" height="4" fill="#333333"/>
+  <rect x="254" y="304" width="4" height="4" fill="#333333"/>
+
+  <!-- Tailcoat tails -->
+  <rect x="228" y="320" width="20" height="20" fill="#222222"/>
+  <rect x="264" y="320" width="20" height="20" fill="#222222"/>
+
+  <!-- Arms -->
+  <rect x="212" y="284" width="16" height="32" fill="#222222"/>
+  <rect x="284" y="284" width="16" height="32" fill="#222222"/>
+  <!-- Gloved hands -->
+  <rect x="210" y="316" width="18" height="12" fill="#F5C9A0"/>
+  <rect x="284" y="316" width="18" height="12" fill="#F5C9A0"/>
+
+  <!-- Silver tray in left hand -->
+  <rect x="190" y="312" width="36" height="4" fill="#C0C0C0"/>
+  <rect x="188" y="316" width="40" height="4" fill="#A8A8A8"/>
+  <!-- Mini copyright symbol on tray (the violation) -->
+  <rect x="200" y="300" width="16" height="12" fill="#FFD700"/>
+  <rect x="202" y="302" width="12" height="8" fill="#1A1400"/>
+  <rect x="204" y="304" width="8" height="4" fill="#FFD700"/>
+
+  <!-- Legs -->
+  <rect x="236" y="340" width="16" height="28" fill="#111111"/>
+  <rect x="260" y="340" width="16" height="28" fill="#111111"/>
+  <!-- Shoes -->
+  <rect x="232" y="368" width="24" height="8" fill="#111111"/>
+  <rect x="256" y="368" width="24" height="8" fill="#111111"/>
+  <!-- Shoe shine highlight -->
+  <rect x="236" y="368" width="6" height="4" fill="#333333"/>
+  <rect x="260" y="368" width="6" height="4" fill="#333333"/>
+
+  <!-- Speed lines left - purple/yellow -->
+  <rect x="36" y="244" width="72" height="8" fill="#6B2FA0"/>
+  <rect x="40" y="260" width="64" height="8" fill="#FFD700"/>
+  <rect x="36" y="276" width="72" height="8" fill="#6B2FA0"/>
+
+  <!-- Speed lines right -->
+  <rect x="404" y="244" width="72" height="8" fill="#6B2FA0"/>
+  <rect x="408" y="260" width="64" height="8" fill="#FFD700"/>
+  <rect x="404" y="276" width="72" height="8" fill="#6B2FA0"/>
+
+  <!-- Checkered flag strip -->
+  <rect x="64" y="392" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="96" y="392" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="128" y="392" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="160" y="392" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="192" y="392" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="224" y="392" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="256" y="392" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="288" y="392" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="320" y="392" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="352" y="392" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="384" y="392" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="416" y="392" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="80" y="392" width="16" height="16" fill="#111111"/>
+  <rect x="112" y="392" width="16" height="16" fill="#111111"/>
+  <rect x="144" y="392" width="16" height="16" fill="#111111"/>
+  <rect x="176" y="392" width="16" height="16" fill="#111111"/>
+  <rect x="208" y="392" width="16" height="16" fill="#111111"/>
+  <rect x="240" y="392" width="16" height="16" fill="#111111"/>
+  <rect x="272" y="392" width="16" height="16" fill="#111111"/>
+  <rect x="304" y="392" width="16" height="16" fill="#111111"/>
+  <rect x="336" y="392" width="16" height="16" fill="#111111"/>
+  <rect x="368" y="392" width="16" height="16" fill="#111111"/>
+  <rect x="400" y="392" width="16" height="16" fill="#111111"/>
+  <rect x="432" y="392" width="16" height="16" fill="#111111"/>
+  <!-- Row 2 offset -->
+  <rect x="80" y="408" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="112" y="408" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="144" y="408" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="176" y="408" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="208" y="408" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="240" y="408" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="272" y="408" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="304" y="408" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="336" y="408" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="368" y="408" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="400" y="408" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="432" y="408" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="64" y="408" width="16" height="16" fill="#111111"/>
+  <rect x="96" y="408" width="16" height="16" fill="#111111"/>
+  <rect x="128" y="408" width="16" height="16" fill="#111111"/>
+  <rect x="160" y="408" width="16" height="16" fill="#111111"/>
+  <rect x="192" y="408" width="16" height="16" fill="#111111"/>
+  <rect x="224" y="408" width="16" height="16" fill="#111111"/>
+  <rect x="256" y="408" width="16" height="16" fill="#111111"/>
+  <rect x="288" y="408" width="16" height="16" fill="#111111"/>
+  <rect x="320" y="408" width="16" height="16" fill="#111111"/>
+  <rect x="352" y="408" width="16" height="16" fill="#111111"/>
+  <rect x="384" y="408" width="16" height="16" fill="#111111"/>
+  <rect x="416" y="408" width="16" height="16" fill="#111111"/>
+
+  <!-- Text: top -->
+  <text x="256" y="56" font-family="'Courier New', monospace" font-size="15" font-weight="900" fill="#FFD700" text-anchor="middle" letter-spacing="3">NANO BANANA PRO RACING</text>
+  <text x="256" y="76" font-family="'Courier New', monospace" font-size="11" font-weight="900" fill="#6B2FA0" text-anchor="middle" letter-spacing="2">COPYRIGHT VIOLATIONS</text>
+
+  <!-- presented by -->
+  <text x="256" y="444" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="#888866" text-anchor="middle" letter-spacing="2">presented by</text>
+  <text x="256" y="462" font-family="'Courier New', monospace" font-size="18" font-weight="900" fill="#FFD700" text-anchor="middle" letter-spacing="3">ASK JEEVES</text>
+
+  <!-- pixel © symbols floating around -->
+  <text x="60" y="170" font-family="'Courier New', monospace" font-size="14" font-weight="900" fill="#6B2FA0" opacity="0.8">©</text>
+  <text x="436" y="180" font-family="'Courier New', monospace" font-size="14" font-weight="900" fill="#6B2FA0" opacity="0.8">©</text>
+  <text x="80" y="330" font-family="'Courier New', monospace" font-size="10" font-weight="900" fill="#FFD700" opacity="0.6">©</text>
+  <text x="422" y="340" font-family="'Courier New', monospace" font-size="10" font-weight="900" fill="#FFD700" opacity="0.6">©</text>
+  <text x="150" y="140" font-family="'Courier New', monospace" font-size="10" font-weight="900" fill="#FFD700" opacity="0.5">©</text>
+  <text x="354" y="144" font-family="'Courier New', monospace" font-size="10" font-weight="900" fill="#6B2FA0" opacity="0.5">©</text>
+
+  <!-- decorative corner pixels bottom -->
+  <rect x="40" y="452" width="8" height="8" fill="#FFD700"/>
+  <rect x="48" y="452" width="8" height="8" fill="#6B2FA0"/>
+  <rect x="40" y="460" width="8" height="8" fill="#6B2FA0"/>
+
+  <rect x="456" y="452" width="8" height="8" fill="#FFD700"/>
+  <rect x="464" y="452" width="8" height="8" fill="#6B2FA0"/>
+  <rect x="464" y="460" width="8" height="8" fill="#6B2FA0"/>
+
+</svg>

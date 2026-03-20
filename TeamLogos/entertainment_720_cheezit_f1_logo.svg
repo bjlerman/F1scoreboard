@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" shape-rendering="crispEdges">
+
+  <!-- Background - velvet dark red, very showbiz -->
+  <rect width="512" height="512" fill="#0D0200"/>
+
+  <!-- Outer border - Cheez-It orange -->
+  <rect x="8" y="8" width="496" height="496" fill="none" stroke="#E8521A" stroke-width="8"/>
+  <!-- Inner border - gold showbiz -->
+  <rect x="20" y="20" width="472" height="472" fill="none" stroke="#D4A800" stroke-width="4"/>
+
+  <!-- Corner accents -->
+  <rect x="8" y="8" width="16" height="16" fill="#E8521A"/>
+  <rect x="24" y="8" width="8" height="8" fill="#D4A800"/>
+  <rect x="8" y="24" width="8" height="8" fill="#D4A800"/>
+
+  <rect x="488" y="8" width="16" height="16" fill="#E8521A"/>
+  <rect x="480" y="8" width="8" height="8" fill="#D4A800"/>
+  <rect x="488" y="24" width="8" height="8" fill="#D4A800"/>
+
+  <rect x="8" y="488" width="16" height="16" fill="#E8521A"/>
+  <rect x="24" y="496" width="8" height="8" fill="#D4A800"/>
+  <rect x="8" y="480" width="8" height="8" fill="#D4A800"/>
+
+  <rect x="488" y="488" width="16" height="16" fill="#E8521A"/>
+  <rect x="480" y="496" width="8" height="8" fill="#D4A800"/>
+  <rect x="488" y="480" width="8" height="8" fill="#D4A800"/>
+
+  <!-- ============================================ -->
+  <!-- CHEEZ-IT CRACKER pixel art - big square      -->
+  <!-- The iconic square cracker with hole center   -->
+  <!-- ============================================ -->
+
+  <!-- Cracker body - main orange square, slightly tilted via offset rows -->
+  <!-- Shadow -->
+  <rect x="160" y="188" width="200" height="200" fill="#6B2000" opacity="0.5"/>
+  <rect x="156" y="184" width="200" height="200" fill="#5A1A00" opacity="0.4"/>
+
+  <!-- Cracker main body -->
+  <rect x="152" y="180" width="200" height="200" fill="#E8521A"/>
+
+  <!-- Cracker edge bevel - darker -->
+  <rect x="152" y="180" width="200" height="8" fill="#C84010"/>
+  <rect x="152" y="180" width="8" height="200" fill="#C84010"/>
+  <rect x="344" y="180" width="8" height="200" fill="#9A2E08"/>
+  <rect x="152" y="372" width="200" height="8" fill="#9A2E08"/>
+
+  <!-- Cracker highlight top-left -->
+  <rect x="160" y="188" width="48" height="4" fill="#F87040"/>
+  <rect x="160" y="188" width="4" height="48" fill="#F87040"/>
+
+  <!-- Cracker surface texture - baked dots grid -->
+  <rect x="176" y="204" width="4" height="4" fill="#C84010"/>
+  <rect x="196" y="204" width="4" height="4" fill="#C84010"/>
+  <rect x="216" y="204" width="4" height="4" fill="#C84010"/>
+  <rect x="236" y="204" width="4" height="4" fill="#C84010"/>
+  <rect x="276" y="204" width="4" height="4" fill="#C84010"/>
+  <rect x="296" y="204" width="4" height="4" fill="#C84010"/>
+  <rect x="316" y="204" width="4" height="4" fill="#C84010"/>
+  <rect x="176" y="224" width="4" height="4" fill="#C84010"/>
+  <rect x="196" y="224" width="4" height="4" fill="#C84010"/>
+  <rect x="216" y="224" width="4" height="4" fill="#C84010"/>
+  <rect x="296" y="224" width="4" height="4" fill="#C84010"/>
+  <rect x="316" y="224" width="4" height="4" fill="#C84010"/>
+  <rect x="176" y="304" width="4" height="4" fill="#C84010"/>
+  <rect x="196" y="304" width="4" height="4" fill="#C84010"/>
+  <rect x="216" y="304" width="4" height="4" fill="#C84010"/>
+  <rect x="296" y="304" width="4" height="4" fill="#C84010"/>
+  <rect x="316" y="304" width="4" height="4" fill="#C84010"/>
+  <rect x="176" y="324" width="4" height="4" fill="#C84010"/>
+  <rect x="196" y="324" width="4" height="4" fill="#C84010"/>
+  <rect x="216" y="324" width="4" height="4" fill="#C84010"/>
+  <rect x="236" y="324" width="4" height="4" fill="#C84010"/>
+  <rect x="276" y="324" width="4" height="4" fill="#C84010"/>
+  <rect x="296" y="324" width="4" height="4" fill="#C84010"/>
+  <rect x="316" y="324" width="4" height="4" fill="#C84010"/>
+  <rect x="176" y="344" width="4" height="4" fill="#C84010"/>
+  <rect x="196" y="344" width="4" height="4" fill="#C84010"/>
+  <rect x="216" y="344" width="4" height="4" fill="#C84010"/>
+  <rect x="236" y="344" width="4" height="4" fill="#C84010"/>
+  <rect x="276" y="344" width="4" height="4" fill="#C84010"/>
+  <rect x="296" y="344" width="4" height="4" fill="#C84010"/>
+  <rect x="316" y="344" width="4" height="4" fill="#C84010"/>
+
+  <!-- Cracker CENTER HOLE - the iconic Cheez-It hole -->
+  <rect x="236" y="240" width="32" height="32" fill="#6B2000"/>
+  <rect x="240" y="244" width="24" height="24" fill="#3D1000"/>
+  <rect x="244" y="248" width="16" height="16" fill="#200800"/>
+  <!-- Hole rim highlight -->
+  <rect x="236" y="240" width="32" height="4" fill="#9A2E08"/>
+  <rect x="236" y="240" width="4" height="32" fill="#9A2E08"/>
+  <rect x="264" y="240" width="4" height="32" fill="#9A3E18"/>
+  <rect x="236" y="268" width="32" height="4" fill="#9A3E18"/>
+
+  <!-- Cheese dust / crumbs around cracker -->
+  <rect x="144" y="368" width="8" height="4" fill="#E8521A" opacity="0.6"/>
+  <rect x="356" y="184" width="4" height="8" fill="#E8521A" opacity="0.6"/>
+  <rect x="148" y="192" width="4" height="4" fill="#D4A800" opacity="0.5"/>
+  <rect x="360" y="372" width="8" height="4" fill="#E8521A" opacity="0.6"/>
+  <rect x="364" y="360" width="4" height="4" fill="#D4A800" opacity="0.5"/>
+  <rect x="136" y="380" width="4" height="4" fill="#E8521A" opacity="0.5"/>
+  <rect x="372" y="188" width="4" height="4" fill="#C84010" opacity="0.5"/>
+
+  <!-- ============================================ -->
+  <!-- SPOTLIGHT beams - Entertainment 720 style    -->
+  <!-- two beams crossing from bottom corners       -->
+  <!-- ============================================ -->
+
+  <!-- Left spotlight beam -->
+  <rect x="56" y="380" width="8" height="4" fill="#D4A800" opacity="0.7"/>
+  <rect x="64" y="360" width="8" height="20" fill="#D4A800" opacity="0.5"/>
+  <rect x="72" y="330" width="8" height="30" fill="#D4A800" opacity="0.35"/>
+  <rect x="80" y="295" width="8" height="35" fill="#D4A800" opacity="0.25"/>
+  <rect x="88" y="254" width="8" height="41" fill="#D4A800" opacity="0.15"/>
+  <!-- Spotlight base circle -->
+  <rect x="44" y="380" width="32" height="16" fill="#D4A800"/>
+  <rect x="48" y="376" width="24" height="4" fill="#E8C020"/>
+  <rect x="52" y="372" width="16" height="4" fill="#F0D030"/>
+
+  <!-- Right spotlight beam -->
+  <rect x="448" y="380" width="8" height="4" fill="#D4A800" opacity="0.7"/>
+  <rect x="440" y="360" width="8" height="20" fill="#D4A800" opacity="0.5"/>
+  <rect x="432" y="330" width="8" height="30" fill="#D4A800" opacity="0.35"/>
+  <rect x="424" y="295" width="8" height="35" fill="#D4A800" opacity="0.25"/>
+  <rect x="416" y="254" width="8" height="41" fill="#D4A800" opacity="0.15"/>
+  <!-- Right spotlight base -->
+  <rect x="436" y="380" width="32" height="16" fill="#D4A800"/>
+  <rect x="440" y="376" width="24" height="4" fill="#E8C020"/>
+  <rect x="444" y="372" width="16" height="4" fill="#F0D030"/>
+
+  <!-- ============================================ -->
+  <!-- STAR pixel art - showbiz sparkles            -->
+  <!-- ============================================ -->
+
+  <!-- Big star top center -->
+  <rect x="252" y="136" width="8" height="28" fill="#D4A800"/>
+  <rect x="240" y="148" width="32" height="8" fill="#D4A800"/>
+  <!-- Star diagonals -->
+  <rect x="244" y="140" width="4" height="4" fill="#D4A800"/>
+  <rect x="256" y="140" width="4" height="4" fill="#D4A800"/>
+  <rect x="244" y="160" width="4" height="4" fill="#D4A800"/>
+  <rect x="256" y="160" width="4" height="4" fill="#D4A800"/>
+  <!-- Star center glow -->
+  <rect x="252" y="148" width="8" height="8" fill="#F0D030"/>
+
+  <!-- Small stars left -->
+  <rect x="96" y="156" width="4" height="12" fill="#D4A800"/>
+  <rect x="92" y="162" width="12" height="4" fill="#D4A800"/>
+
+  <rect x="72" y="220" width="4" height="12" fill="#E8521A" opacity="0.7"/>
+  <rect x="68" y="226" width="12" height="4" fill="#E8521A" opacity="0.7"/>
+
+  <!-- Small stars right -->
+  <rect x="412" y="156" width="4" height="12" fill="#D4A800"/>
+  <rect x="408" y="162" width="12" height="4" fill="#D4A800"/>
+
+  <rect x="436" y="220" width="4" height="12" fill="#E8521A" opacity="0.7"/>
+  <rect x="432" y="226" width="12" height="4" fill="#E8521A" opacity="0.7"/>
+
+  <!-- tiny star twinkles -->
+  <rect x="128" y="192" width="4" height="4" fill="#D4A800" opacity="0.6"/>
+  <rect x="380" y="200" width="4" height="4" fill="#D4A800" opacity="0.6"/>
+  <rect x="112" y="280" width="4" height="4" fill="#E8521A" opacity="0.5"/>
+  <rect x="396" y="280" width="4" height="4" fill="#E8521A" opacity="0.5"/>
+
+  <!-- Checkered flag strip -->
+  <rect x="64" y="416" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="96" y="416" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="128" y="416" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="160" y="416" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="192" y="416" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="224" y="416" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="256" y="416" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="288" y="416" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="320" y="416" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="352" y="416" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="384" y="416" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="416" y="416" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="80" y="416" width="16" height="16" fill="#111111"/>
+  <rect x="112" y="416" width="16" height="16" fill="#111111"/>
+  <rect x="144" y="416" width="16" height="16" fill="#111111"/>
+  <rect x="176" y="416" width="16" height="16" fill="#111111"/>
+  <rect x="208" y="416" width="16" height="16" fill="#111111"/>
+  <rect x="240" y="416" width="16" height="16" fill="#111111"/>
+  <rect x="272" y="416" width="16" height="16" fill="#111111"/>
+  <rect x="304" y="416" width="16" height="16" fill="#111111"/>
+  <rect x="336" y="416" width="16" height="16" fill="#111111"/>
+  <rect x="368" y="416" width="16" height="16" fill="#111111"/>
+  <rect x="400" y="416" width="16" height="16" fill="#111111"/>
+  <rect x="432" y="416" width="16" height="16" fill="#111111"/>
+  <!-- Row 2 -->
+  <rect x="80" y="432" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="112" y="432" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="144" y="432" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="176" y="432" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="208" y="432" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="240" y="432" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="272" y="432" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="304" y="432" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="336" y="432" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="368" y="432" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="400" y="432" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="432" y="432" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="64" y="432" width="16" height="16" fill="#111111"/>
+  <rect x="96" y="432" width="16" height="16" fill="#111111"/>
+  <rect x="128" y="432" width="16" height="16" fill="#111111"/>
+  <rect x="160" y="432" width="16" height="16" fill="#111111"/>
+  <rect x="192" y="432" width="16" height="16" fill="#111111"/>
+  <rect x="224" y="432" width="16" height="16" fill="#111111"/>
+  <rect x="256" y="432" width="16" height="16" fill="#111111"/>
+  <rect x="288" y="432" width="16" height="16" fill="#111111"/>
+  <rect x="320" y="432" width="16" height="16" fill="#111111"/>
+  <rect x="352" y="432" width="16" height="16" fill="#111111"/>
+  <rect x="384" y="432" width="16" height="16" fill="#111111"/>
+  <rect x="416" y="432" width="16" height="16" fill="#111111"/>
+
+  <!-- Text top -->
+  <text x="256" y="44" font-family="'Courier New', monospace" font-size="14" font-weight="900" fill="#D4A800" text-anchor="middle" letter-spacing="4">ENTERTAINMENT 720</text>
+  <text x="256" y="62" font-family="'Courier New', monospace" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">BENJAMIN LERMAN</text>
+  <text x="256" y="80" font-family="'Courier New', monospace" font-size="17" font-weight="900" fill="#E8521A" text-anchor="middle" letter-spacing="4">CHEEZ-IT</text>
+  <text x="256" y="96" font-family="'Courier New', monospace" font-size="11" font-weight="900" fill="#D4A800" text-anchor="middle" letter-spacing="5">F1  TEAM</text>
+
+  <!-- bottom text -->
+  <text x="256" y="464" font-family="'Courier New', monospace" font-size="9" font-weight="700" fill="#6B2000" text-anchor="middle" letter-spacing="2">it's not just cheese.</text>
+  <text x="256" y="480" font-family="'Courier New', monospace" font-size="9" font-weight="700" fill="#D4A800" text-anchor="middle" letter-spacing="2">it's a lifestyle. it's a team.</text>
+
+  <!-- corner decoration -->
+  <rect x="40" y="468" width="8" height="8" fill="#E8521A"/>
+  <rect x="48" y="468" width="8" height="8" fill="#D4A800"/>
+  <rect x="40" y="476" width="8" height="8" fill="#D4A800"/>
+
+  <rect x="456" y="468" width="8" height="8" fill="#E8521A"/>
+  <rect x="464" y="468" width="8" height="8" fill="#D4A800"/>
+  <rect x="464" y="476" width="8" height="8" fill="#D4A800"/>
+
+</svg>

@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" shape-rendering="crispEdges">
+
+  <!-- Background - medical white-blue night -->
+  <rect width="512" height="512" fill="#020B18"/>
+
+  <!-- Outer border - Kaiser blue -->
+  <rect x="8" y="8" width="496" height="496" fill="none" stroke="#003087" stroke-width="8"/>
+  <!-- Inner border - Little Debbie red -->
+  <rect x="20" y="20" width="472" height="472" fill="none" stroke="#CC2200" stroke-width="4"/>
+
+  <!-- Corner accents - alternating KP blue and LD red -->
+  <rect x="8" y="8" width="16" height="16" fill="#003087"/>
+  <rect x="24" y="8" width="8" height="8" fill="#CC2200"/>
+  <rect x="8" y="24" width="8" height="8" fill="#CC2200"/>
+
+  <rect x="488" y="8" width="16" height="16" fill="#003087"/>
+  <rect x="480" y="8" width="8" height="8" fill="#CC2200"/>
+  <rect x="488" y="24" width="8" height="8" fill="#CC2200"/>
+
+  <rect x="8" y="488" width="16" height="16" fill="#003087"/>
+  <rect x="24" y="496" width="8" height="8" fill="#CC2200"/>
+  <rect x="8" y="480" width="8" height="8" fill="#CC2200"/>
+
+  <rect x="488" y="488" width="16" height="16" fill="#003087"/>
+  <rect x="480" y="496" width="8" height="8" fill="#CC2200"/>
+  <rect x="488" y="480" width="8" height="8" fill="#CC2200"/>
+
+  <!-- ============================================ -->
+  <!-- PIXEL SNACK CAKE - Swiss Roll / oatmeal pie  -->
+  <!-- Little Debbie flagship, center mass          -->
+  <!-- ============================================ -->
+
+  <!-- Cake body outer (chocolate brown) -->
+  <rect x="144" y="220" width="224" height="96" fill="#3D1A00"/>
+  <rect x="136" y="228" width="240" height="80" fill="#3D1A00"/>
+  <rect x="128" y="236" width="256" height="64" fill="#4A2200"/>
+
+  <!-- Cake body inner (cream filling swirl visible from side) -->
+  <rect x="140" y="244" width="232" height="48" fill="#5C2D00"/>
+  <!-- Cream stripe through middle -->
+  <rect x="140" y="256" width="232" height="24" fill="#F5E6C8"/>
+  <!-- Chocolate stripe in cream -->
+  <rect x="140" y="262" width="232" height="12" fill="#7A3D00"/>
+  <!-- Cream again -->
+  <rect x="140" y="268" width="232" height="8" fill="#F5E6C8"/>
+
+  <!-- Cake top surface -->
+  <rect x="136" y="220" width="240" height="16" fill="#6B3300"/>
+  <rect x="144" y="212" width="224" height="8" fill="#5C2D00"/>
+  <rect x="152" y="208" width="208" height="4" fill="#7A3D00"/>
+
+  <!-- Chocolate glaze sheen top -->
+  <rect x="160" y="212" width="48" height="4" fill="#8B4500"/>
+  <rect x="240" y="208" width="32" height="4" fill="#8B4500"/>
+  <rect x="320" y="212" width="32" height="4" fill="#8B4500"/>
+
+  <!-- Powdered sugar dusting (white pixel dots on top) -->
+  <rect x="168" y="220" width="4" height="4" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="200" y="216" width="4" height="4" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="240" y="220" width="4" height="4" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="280" y="216" width="4" height="4" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="316" y="220" width="4" height="4" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="340" y="218" width="4" height="4" fill="#FFFFFF" opacity="0.4"/>
+
+  <!-- Cake bottom -->
+  <rect x="136" y="316" width="240" height="8" fill="#3D1A00"/>
+  <rect x="144" y="324" width="224" height="4" fill="#2A1000"/>
+
+  <!-- Wrapper / foil ends -->
+  <!-- Left end -->
+  <rect x="128" y="232" width="16" height="72" fill="#E8E0C8"/>
+  <rect x="124" y="240" width="8" height="56" fill="#D4C8A8"/>
+  <!-- Wrapper crinkle lines left -->
+  <rect x="128" y="244" width="12" height="4" fill="#C0B490"/>
+  <rect x="128" y="256" width="12" height="4" fill="#C0B490"/>
+  <rect x="128" y="268" width="12" height="4" fill="#C0B490"/>
+  <rect x="128" y="280" width="12" height="4" fill="#C0B490"/>
+  <rect x="128" y="292" width="12" height="4" fill="#C0B490"/>
+
+  <!-- Right end -->
+  <rect x="368" y="232" width="16" height="72" fill="#E8E0C8"/>
+  <rect x="380" y="240" width="8" height="56" fill="#D4C8A8"/>
+  <!-- Wrapper crinkle lines right -->
+  <rect x="372" y="244" width="12" height="4" fill="#C0B490"/>
+  <rect x="372" y="256" width="12" height="4" fill="#C0B490"/>
+  <rect x="372" y="268" width="12" height="4" fill="#C0B490"/>
+  <rect x="372" y="280" width="12" height="4" fill="#C0B490"/>
+  <rect x="372" y="292" width="12" height="4" fill="#C0B490"/>
+
+  <!-- Little Debbie bow/logo spot on cake (her signature bow) -->
+  <!-- Left bow loop -->
+  <rect x="220" y="200" width="16" height="12" fill="#CC2200"/>
+  <rect x="216" y="196" width="24" height="8" fill="#CC2200"/>
+  <rect x="220" y="192" width="16" height="4" fill="#EE3311"/>
+  <!-- Center knot -->
+  <rect x="252" y="196" width="8" height="12" fill="#AA1100"/>
+  <!-- Right bow loop -->
+  <rect x="276" y="200" width="16" height="12" fill="#CC2200"/>
+  <rect x="272" y="196" width="24" height="8" fill="#CC2200"/>
+  <rect x="276" y="192" width="16" height="4" fill="#EE3311"/>
+  <!-- Bow tails -->
+  <rect x="228" y="208" width="8" height="8" fill="#CC2200"/>
+  <rect x="276" y="208" width="8" height="8" fill="#CC2200"/>
+
+  <!-- ============================================ -->
+  <!-- MEDICAL CROSS pixel art (KP, top left area)  -->
+  <!-- ============================================ -->
+  <rect x="56" y="148" width="16" height="48" fill="#003087"/>
+  <rect x="40" y="164" width="48" height="16" fill="#003087"/>
+  <!-- Cross highlight -->
+  <rect x="58" y="150" width="4" height="12" fill="#0044BB"/>
+  <rect x="42" y="166" width="12" height="4" fill="#0044BB"/>
+
+  <!-- PENCIL/ILLUSTRATION pixel art (Billustration dept, top right) -->
+  <!-- Pencil body -->
+  <rect x="400" y="140" width="12" height="56" fill="#FFD700"/>
+  <!-- Pencil tip -->
+  <rect x="400" y="196" width="12" height="8" fill="#F5C9A0"/>
+  <rect x="402" y="204" width="8" height="4" fill="#F5C9A0"/>
+  <rect x="404" y="208" width="4" height="4" fill="#333333"/>
+  <!-- Pencil eraser -->
+  <rect x="400" y="136" width="12" height="8" fill="#FF9999"/>
+  <rect x="400" y="132" width="12" height="4" fill="#888888"/>
+  <!-- Pencil stripe -->
+  <rect x="400" y="168" width="12" height="4" fill="#CC9900"/>
+  <!-- Pencil lines (wood grain) -->
+  <rect x="402" y="144" width="2" height="48" fill="#E6BE00"/>
+  <rect x="408" y="144" width="2" height="48" fill="#E6BE00"/>
+
+  <!-- Squiggly illustration line from pencil -->
+  <rect x="380" y="208" width="8" height="4" fill="#333333"/>
+  <rect x="372" y="212" width="8" height="4" fill="#333333"/>
+  <rect x="364" y="208" width="8" height="4" fill="#333333"/>
+  <rect x="356" y="212" width="8" height="4" fill="#333333"/>
+
+  <!-- Speed lines left - KP blue -->
+  <rect x="36" y="252" width="72" height="8" fill="#003087"/>
+  <rect x="40" y="268" width="64" height="8" fill="#FFFFFF"/>
+  <rect x="36" y="284" width="72" height="8" fill="#003087"/>
+
+  <!-- Speed lines right - LD red -->
+  <rect x="404" y="252" width="72" height="8" fill="#CC2200"/>
+  <rect x="408" y="268" width="64" height="8" fill="#FFFFFF"/>
+  <rect x="404" y="284" width="72" height="8" fill="#CC2200"/>
+
+  <!-- Checkered flag strip -->
+  <rect x="64" y="352" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="96" y="352" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="128" y="352" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="160" y="352" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="192" y="352" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="224" y="352" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="256" y="352" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="288" y="352" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="320" y="352" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="352" y="352" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="384" y="352" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="416" y="352" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="80" y="352" width="16" height="16" fill="#111111"/>
+  <rect x="112" y="352" width="16" height="16" fill="#111111"/>
+  <rect x="144" y="352" width="16" height="16" fill="#111111"/>
+  <rect x="176" y="352" width="16" height="16" fill="#111111"/>
+  <rect x="208" y="352" width="16" height="16" fill="#111111"/>
+  <rect x="240" y="352" width="16" height="16" fill="#111111"/>
+  <rect x="272" y="352" width="16" height="16" fill="#111111"/>
+  <rect x="304" y="352" width="16" height="16" fill="#111111"/>
+  <rect x="336" y="352" width="16" height="16" fill="#111111"/>
+  <rect x="368" y="352" width="16" height="16" fill="#111111"/>
+  <rect x="400" y="352" width="16" height="16" fill="#111111"/>
+  <rect x="432" y="352" width="16" height="16" fill="#111111"/>
+  <!-- Row 2 -->
+  <rect x="80" y="368" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="112" y="368" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="144" y="368" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="176" y="368" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="208" y="368" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="240" y="368" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="272" y="368" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="304" y="368" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="336" y="368" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="368" y="368" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="400" y="368" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="432" y="368" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="64" y="368" width="16" height="16" fill="#111111"/>
+  <rect x="96" y="368" width="16" height="16" fill="#111111"/>
+  <rect x="128" y="368" width="16" height="16" fill="#111111"/>
+  <rect x="160" y="368" width="16" height="16" fill="#111111"/>
+  <rect x="192" y="368" width="16" height="16" fill="#111111"/>
+  <rect x="224" y="368" width="16" height="16" fill="#111111"/>
+  <rect x="256" y="368" width="16" height="16" fill="#111111"/>
+  <rect x="288" y="368" width="16" height="16" fill="#111111"/>
+  <rect x="320" y="368" width="16" height="16" fill="#111111"/>
+  <rect x="352" y="368" width="16" height="16" fill="#111111"/>
+  <rect x="384" y="368" width="16" height="16" fill="#111111"/>
+  <rect x="416" y="368" width="16" height="16" fill="#111111"/>
+
+  <!-- Text top -->
+  <text x="256" y="50" font-family="'Courier New', monospace" font-size="13" font-weight="900" fill="#003087" text-anchor="middle" letter-spacing="3">KAISER PERMANENTE</text>
+  <text x="256" y="68" font-family="'Courier New', monospace" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">DEPT. OF BILLUSTRATION</text>
+  <text x="256" y="84" font-family="'Courier New', monospace" font-size="13" font-weight="900" fill="#CC2200" text-anchor="middle" letter-spacing="4">RACING TEAM</text>
+
+  <!-- fueled by text bottom -->
+  <text x="256" y="410" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="#888888" text-anchor="middle" letter-spacing="3">fueled by</text>
+  <text x="256" y="432" font-family="'Courier New', monospace" font-size="20" font-weight="900" fill="#CC2200" text-anchor="middle" letter-spacing="3">LITTLE DEBBIE</text>
+  <!-- LD tagline -->
+  <text x="256" y="450" font-family="'Courier New', monospace" font-size="9" font-weight="700" fill="#FFD700" text-anchor="middle" letter-spacing="2">snack cakes for champions</text>
+
+  <!-- decorative corner pixels bottom -->
+  <rect x="40" y="460" width="8" height="8" fill="#003087"/>
+  <rect x="48" y="460" width="8" height="8" fill="#CC2200"/>
+  <rect x="40" y="468" width="8" height="8" fill="#CC2200"/>
+
+  <rect x="456" y="460" width="8" height="8" fill="#003087"/>
+  <rect x="464" y="460" width="8" height="8" fill="#CC2200"/>
+  <rect x="464" y="468" width="8" height="8" fill="#CC2200"/>
+
+  <!-- heartbeat / EKG line decorative (medical KP touch) -->
+  <rect x="96" y="180" width="8" height="4" fill="#003087"/>
+  <rect x="104" y="176" width="4" height="8" fill="#003087"/>
+  <rect x="108" y="168" width="4" height="16" fill="#003087"/>
+  <rect x="112" y="180" width="4" height="4" fill="#003087"/>
+  <rect x="116" y="176" width="4" height="12" fill="#003087"/>
+  <rect x="120" y="180" width="8" height="4" fill="#003087"/>
+
+  <!-- small snack cake crumbs around -->
+  <rect x="116" y="332" width="4" height="4" fill="#5C2D00"/>
+  <rect x="124" y="340" width="4" height="4" fill="#F5E6C8"/>
+  <rect x="376" y="336" width="4" height="4" fill="#5C2D00"/>
+  <rect x="388" y="344" width="4" height="4" fill="#F5E6C8"/>
+  <rect x="256" y="336" width="4" height="4" fill="#F5E6C8"/>
+
+</svg>

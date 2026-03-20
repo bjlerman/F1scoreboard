@@ -1,0 +1,258 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" shape-rendering="crispEdges">
+
+  <!-- Background - deep espresso night -->
+  <rect width="512" height="512" fill="#0C0800"/>
+
+  <!-- Outer border - gold rim -->
+  <rect x="8" y="8" width="496" height="496" fill="none" stroke="#C8960A" stroke-width="8"/>
+  <!-- Inner border - cream -->
+  <rect x="20" y="20" width="472" height="472" fill="none" stroke="#E8D8A0" stroke-width="4"/>
+
+  <!-- Corner accents -->
+  <rect x="8" y="8" width="16" height="16" fill="#C8960A"/>
+  <rect x="24" y="8" width="8" height="8" fill="#C8960A"/>
+  <rect x="8" y="24" width="8" height="8" fill="#C8960A"/>
+
+  <rect x="488" y="8" width="16" height="16" fill="#C8960A"/>
+  <rect x="480" y="8" width="8" height="8" fill="#C8960A"/>
+  <rect x="488" y="24" width="8" height="8" fill="#C8960A"/>
+
+  <rect x="8" y="488" width="16" height="16" fill="#C8960A"/>
+  <rect x="24" y="496" width="8" height="8" fill="#C8960A"/>
+  <rect x="8" y="480" width="8" height="8" fill="#C8960A"/>
+
+  <rect x="488" y="488" width="16" height="16" fill="#C8960A"/>
+  <rect x="480" y="496" width="8" height="8" fill="#C8960A"/>
+  <rect x="488" y="480" width="8" height="8" fill="#C8960A"/>
+
+  <!-- ============================================ -->
+  <!-- ESPRESSO MARTINI GLASS - pixel art           -->
+  <!-- Classic inverted triangle martini glass      -->
+  <!-- filled with dark espresso liquid + foam top  -->
+  <!-- ============================================ -->
+
+  <!-- Martini glass stem -->
+  <rect x="252" y="308" width="8" height="48" fill="#C8960A"/>
+  <!-- Base -->
+  <rect x="212" y="356" width="88" height="8" fill="#C8960A"/>
+  <rect x="204" y="364" width="104" height="8" fill="#B07808"/>
+  <!-- Base highlight -->
+  <rect x="216" y="356" width="20" height="4" fill="#E8B830"/>
+
+  <!-- Stem node (knob in middle of stem) -->
+  <rect x="248" y="332" width="16" height="12" fill="#B07808"/>
+  <rect x="246" y="334" width="20" height="8" fill="#C8960A"/>
+  <rect x="248" y="334" width="8" height="4" fill="#E8B830"/>
+
+  <!-- Glass bowl - inverted triangle pixel shape -->
+  <!-- Glass walls left side going up and out -->
+  <rect x="244" y="296" width="8" height="12" fill="#8BB8CC" opacity="0.5"/>
+  <rect x="236" y="284" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="228" y="272" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="220" y="260" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="212" y="248" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="204" y="236" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="196" y="224" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="188" y="212" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="180" y="200" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="172" y="188" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+
+  <!-- Glass walls right side -->
+  <rect x="260" y="296" width="8" height="12" fill="#8BB8CC" opacity="0.5"/>
+  <rect x="268" y="284" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="276" y="272" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="284" y="260" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="292" y="248" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="300" y="236" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="308" y="224" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="316" y="212" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="324" y="200" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+  <rect x="332" y="188" width="8" height="12" fill="#8BB8CC" opacity="0.4"/>
+
+  <!-- Glass rim top -->
+  <rect x="172" y="184" width="168" height="8" fill="#C8960A"/>
+  <!-- Rim highlight -->
+  <rect x="180" y="184" width="40" height="4" fill="#E8B830"/>
+
+  <!-- Espresso liquid fill inside glass -->
+  <!-- Deep espresso rows filling the triangle -->
+  <rect x="248" y="292" width="16" height="8" fill="#2A1400"/>
+  <rect x="240" y="280" width="32" height="12" fill="#2A1400"/>
+  <rect x="232" y="268" width="48" height="12" fill="#321800"/>
+  <rect x="224" y="256" width="64" height="12" fill="#2A1400"/>
+  <rect x="216" y="244" width="80" height="12" fill="#321800"/>
+  <rect x="208" y="232" width="96" height="12" fill="#2A1400"/>
+  <rect x="200" y="220" width="112" height="12" fill="#321800"/>
+  <rect x="192" y="208" width="128" height="12" fill="#2A1400"/>
+  <rect x="184" y="196" width="144" height="12" fill="#321800"/>
+
+  <!-- Coffee foam / crema layer on top of liquid -->
+  <rect x="180" y="192" width="152" height="8" fill="#C8780A"/>
+  <rect x="184" y="188" width="144" height="8" fill="#D4900A"/>
+  <!-- Foam texture / bubbles -->
+  <rect x="192" y="190" width="8" height="4" fill="#E8A820"/>
+  <rect x="216" y="188" width="8" height="4" fill="#E8A820"/>
+  <rect x="244" y="190" width="8" height="4" fill="#E8A820"/>
+  <rect x="272" y="188" width="8" height="4" fill="#E8A820"/>
+  <rect x="296" y="190" width="8" height="4" fill="#E8A820"/>
+  <rect x="308" y="192" width="8" height="4" fill="#C8780A"/>
+  <!-- Dark espresso swirl pattern in foam -->
+  <rect x="204" y="192" width="4" height="4" fill="#5C2D00"/>
+  <rect x="228" y="190" width="4" height="4" fill="#5C2D00"/>
+  <rect x="256" y="192" width="4" height="4" fill="#5C2D00"/>
+  <rect x="284" y="190" width="4" height="4" fill="#5C2D00"/>
+  <rect x="304" y="192" width="4" height="4" fill="#5C2D00"/>
+
+  <!-- Coffee bean garnish on rim -->
+  <!-- Bean left -->
+  <rect x="168" y="178" width="16" height="8" fill="#3D1A00"/>
+  <rect x="170" y="176" width="12" height="4" fill="#5C2D00"/>
+  <rect x="174" y="178" width="4" height="8" fill="#2A1000"/>
+
+  <!-- Cocktail pick / olive skewer -->
+  <rect x="300" y="160" width="4" height="28" fill="#C8960A"/>
+  <!-- Coffee beans on pick -->
+  <rect x="296" y="156" width="12" height="8" fill="#3D1A00"/>
+  <rect x="298" y="154" width="8" height="4" fill="#5C2D00"/>
+  <rect x="300" y="156" width="4" height="8" fill="#2A1000"/>
+  <rect x="296" y="148" width="12" height="8" fill="#3D1A00"/>
+  <rect x="298" y="146" width="8" height="4" fill="#5C2D00"/>
+  <rect x="300" y="148" width="4" height="8" fill="#2A1000"/>
+
+  <!-- Bubbles / effervescence rising in glass -->
+  <rect x="232" y="260" width="4" height="4" fill="#4A2800" opacity="0.8"/>
+  <rect x="248" y="240" width="4" height="4" fill="#4A2800" opacity="0.8"/>
+  <rect x="264" y="256" width="4" height="4" fill="#4A2800" opacity="0.8"/>
+  <rect x="240" y="228" width="4" height="4" fill="#4A2800" opacity="0.8"/>
+  <rect x="276" y="244" width="4" height="4" fill="#4A2800" opacity="0.8"/>
+
+  <!-- ============================================ -->
+  <!-- MAXWELL HOUSE CAN - pixel art, left side     -->
+  <!-- Classic red/blue MH coffee can               -->
+  <!-- ============================================ -->
+
+  <!-- Can body -->
+  <rect x="60" y="220" width="56" height="80" fill="#CC2200"/>
+  <!-- Can label band -->
+  <rect x="60" y="240" width="56" height="40" fill="#FFFFFF"/>
+  <!-- MH brand colour stripe -->
+  <rect x="60" y="244" width="56" height="8" fill="#003087"/>
+  <rect x="60" y="264" width="56" height="8" fill="#003087"/>
+  <!-- M H pixel letters in white band -->
+  <rect x="70" y="252" width="4" height="12" fill="#CC2200"/>
+  <rect x="76" y="252" width="4" height="12" fill="#CC2200"/>
+  <rect x="74" y="256" width="4" height="4" fill="#CC2200"/>
+  <rect x="86" y="252" width="4" height="12" fill="#CC2200"/>
+  <rect x="90" y="252" width="4" height="12" fill="#CC2200"/>
+  <rect x="94" y="252" width="4" height="12" fill="#CC2200"/>
+  <!-- Can top rim -->
+  <rect x="60" y="216" width="56" height="8" fill="#888888"/>
+  <rect x="64" y="212" width="48" height="4" fill="#AAAAAA"/>
+  <!-- Can pull tab -->
+  <rect x="80" y="208" width="16" height="4" fill="#BBBBBB"/>
+  <rect x="84" y="204" width="8" height="4" fill="#999999"/>
+  <!-- Can bottom -->
+  <rect x="60" y="300" width="56" height="8" fill="#888888"/>
+  <rect x="64" y="308" width="48" height="4" fill="#AAAAAA"/>
+  <!-- Can highlight -->
+  <rect x="64" y="224" width="8" height="60" fill="#EE3311" opacity="0.4"/>
+
+  <!-- Steam wisps from can -->
+  <rect x="76" y="196" width="4" height="8" fill="#C8C0B0" opacity="0.6"/>
+  <rect x="80" y="188" width="4" height="8" fill="#C8C0B0" opacity="0.4"/>
+  <rect x="84" y="192" width="4" height="8" fill="#C8C0B0" opacity="0.5"/>
+  <rect x="88" y="184" width="4" height="8" fill="#C8C0B0" opacity="0.3"/>
+  <rect x="92" y="192" width="4" height="8" fill="#C8C0B0" opacity="0.4"/>
+
+  <!-- Speed lines left - espresso brown/gold -->
+  <rect x="36" y="252" width="20" height="8" fill="#C8960A"/>
+  <rect x="36" y="268" width="20" height="8" fill="#E8D8A0"/>
+  <rect x="36" y="284" width="20" height="8" fill="#C8960A"/>
+
+  <!-- Speed lines right -->
+  <rect x="456" y="252" width="20" height="8" fill="#C8960A"/>
+  <rect x="456" y="268" width="20" height="8" fill="#E8D8A0"/>
+  <rect x="456" y="284" width="20" height="8" fill="#C8960A"/>
+
+  <!-- Stars / shimmer around glass (cocktail bar vibes) -->
+  <rect x="148" y="168" width="4" height="4" fill="#C8960A"/>
+  <rect x="156" y="156" width="4" height="4" fill="#E8D8A0"/>
+  <rect x="144" y="148" width="4" height="4" fill="#C8960A"/>
+  <rect x="356" y="168" width="4" height="4" fill="#C8960A"/>
+  <rect x="360" y="152" width="4" height="4" fill="#E8D8A0"/>
+  <rect x="348" y="160" width="4" height="4" fill="#C8960A"/>
+  <rect x="420" y="200" width="4" height="4" fill="#E8D8A0"/>
+  <rect x="428" y="188" width="4" height="4" fill="#C8960A"/>
+  <rect x="60" y="176" width="4" height="4" fill="#E8D8A0"/>
+  <rect x="52" y="188" width="4" height="4" fill="#C8960A"/>
+
+  <!-- Checkered flag strip -->
+  <rect x="64" y="384" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="96" y="384" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="128" y="384" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="160" y="384" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="192" y="384" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="224" y="384" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="256" y="384" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="288" y="384" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="320" y="384" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="352" y="384" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="384" y="384" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="416" y="384" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="80" y="384" width="16" height="16" fill="#111111"/>
+  <rect x="112" y="384" width="16" height="16" fill="#111111"/>
+  <rect x="144" y="384" width="16" height="16" fill="#111111"/>
+  <rect x="176" y="384" width="16" height="16" fill="#111111"/>
+  <rect x="208" y="384" width="16" height="16" fill="#111111"/>
+  <rect x="240" y="384" width="16" height="16" fill="#111111"/>
+  <rect x="272" y="384" width="16" height="16" fill="#111111"/>
+  <rect x="304" y="384" width="16" height="16" fill="#111111"/>
+  <rect x="336" y="384" width="16" height="16" fill="#111111"/>
+  <rect x="368" y="384" width="16" height="16" fill="#111111"/>
+  <rect x="400" y="384" width="16" height="16" fill="#111111"/>
+  <rect x="432" y="384" width="16" height="16" fill="#111111"/>
+  <!-- Row 2 -->
+  <rect x="80" y="400" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="112" y="400" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="144" y="400" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="176" y="400" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="208" y="400" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="240" y="400" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="272" y="400" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="304" y="400" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="336" y="400" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="368" y="400" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="400" y="400" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="432" y="400" width="16" height="16" fill="#FFFFFF"/>
+  <rect x="64" y="400" width="16" height="16" fill="#111111"/>
+  <rect x="96" y="400" width="16" height="16" fill="#111111"/>
+  <rect x="128" y="400" width="16" height="16" fill="#111111"/>
+  <rect x="160" y="400" width="16" height="16" fill="#111111"/>
+  <rect x="192" y="400" width="16" height="16" fill="#111111"/>
+  <rect x="224" y="400" width="16" height="16" fill="#111111"/>
+  <rect x="256" y="400" width="16" height="16" fill="#111111"/>
+  <rect x="288" y="400" width="16" height="16" fill="#111111"/>
+  <rect x="320" y="400" width="16" height="16" fill="#111111"/>
+  <rect x="352" y="400" width="16" height="16" fill="#111111"/>
+  <rect x="384" y="400" width="16" height="16" fill="#111111"/>
+  <rect x="416" y="400" width="16" height="16" fill="#111111"/>
+
+  <!-- Text top -->
+  <text x="256" y="52" font-family="'Courier New', monospace" font-size="16" font-weight="900" fill="#C8960A" text-anchor="middle" letter-spacing="5">MAXWELL HOUSE</text>
+  <text x="256" y="72" font-family="'Courier New', monospace" font-size="13" font-weight="900" fill="#E8D8A0" text-anchor="middle" letter-spacing="3">ESPRESSO MARTINI</text>
+  <text x="256" y="90" font-family="'Courier New', monospace" font-size="13" font-weight="900" fill="#C8960A" text-anchor="middle" letter-spacing="5">F1  TEAM</text>
+
+  <!-- tagline bottom -->
+  <text x="256" y="434" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="#5C3A00" text-anchor="middle" letter-spacing="2">good to the last</text>
+  <text x="256" y="452" font-family="'Courier New', monospace" font-size="16" font-weight="900" fill="#C8960A" text-anchor="middle" letter-spacing="4">CHEQUERED FLAG</text>
+
+  <!-- corner pixel decoration bottom -->
+  <rect x="40" y="456" width="8" height="8" fill="#C8960A"/>
+  <rect x="48" y="456" width="8" height="8" fill="#E8D8A0"/>
+  <rect x="40" y="464" width="8" height="8" fill="#E8D8A0"/>
+
+  <rect x="456" y="456" width="8" height="8" fill="#C8960A"/>
+  <rect x="464" y="456" width="8" height="8" fill="#E8D8A0"/>
+  <rect x="464" y="464" width="8" height="8" fill="#E8D8A0"/>
+
+</svg>

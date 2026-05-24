@@ -277,7 +277,26 @@
     {
       "id": "race_c8kn7plw",
       "name": "R05 Canadian Grand Prix (Montreal)",
-      "results": {}
+      "results": {
+        "Albon": "DNF",
+        "Alonso": "DNF",
+        "Antonelli": 1,
+        "Bearman": 10,
+        "Bottas": 16,
+        "Colapinto": 6,
+        "Gasly": 8,
+        "Hadjar": 5,
+        "Hamilton": 2,
+        "Hulkenberg": 12,
+        "Lawson": 7,
+        "Leclerc": 4,
+        "Norris": "DNF",
+        "Ocon": 14,
+        "Piastri": 11,
+        "Russell": "DNF",
+        "Sainz": 9,
+        "Verstappen": 3
+      }
     },
     {
       "id": "race_8ruhs9xg",

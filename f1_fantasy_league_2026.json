@@ -229,15 +229,53 @@
     {
       "id": "race_216o822n",
       "name": "R03 Japanese Grand Prix (Suzuka)",
-      "results": {}
+      "results": {
+        "Albon": 20,
+        "Alonso": 18,
+        "Antonelli": 1,
+        "Bearman": "DNF",
+        "Bottas": 19,
+        "Colapinto": 16,
+        "Gasly": 7,
+        "Hadjar": 12,
+        "Hamilton": 6,
+        "Hulkenberg": 11,
+        "Lawson": 9,
+        "Leclerc": 3,
+        "Norris": 5,
+        "Ocon": 10,
+        "Piastri": 2,
+        "Russell": 4,
+        "Sainz": 15,
+        "Verstappen": 8
+      }
     },
     {
-      "id": "race_l0egncav",
+      "id": "race_9g56nt4a",
       "name": "R04 Miami Grand Prix (Miami)",
-      "results": {}
+      "results": {
+        "Albon": 10,
+        "Alonso": 15,
+        "Antonelli": 1,
+        "Bearman": 11,
+        "Bottas": 18,
+        "Colapinto": 7,
+        "Gasly": "DNF",
+        "Hadjar": "DNF",
+        "Hamilton": 6,
+        "Hulkenberg": "DNF",
+        "Lawson": "DNF",
+        "Leclerc": 8,
+        "Norris": 2,
+        "Ocon": 13,
+        "Piastri": 3,
+        "Russell": 4,
+        "Sainz": 9,
+        "Verstappen": 5
+      }
     },
     {
-      "id": "race_bk08urak",
+      "id": "race_c8kn7plw",
       "name": "R05 Canadian Grand Prix (Montreal)",
       "results": {}
     },

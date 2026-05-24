@@ -223,13 +223,24 @@ function isCancelledRound(round) {
   return Number.isInteger(round) && CANCELLED_ROUNDS_2026.has(round);
 }
 
+function looksLikeCancelledRaceName(name) {
+  const text = String(name || "").toLowerCase();
+  return (
+    text.includes("bahrain") ||
+    text.includes("sakhir") ||
+    text.includes("saudi") ||
+    text.includes("jeddah")
+  );
+}
+
 function removeCancelledRaces(list) {
   const races = Array.isArray(list) ? list : [];
   const rounds = new Set(races.map((race) => roundFromRaceName(race?.name)).filter((round) => Number.isInteger(round)));
   if (rounds.size < FULL_SEASON_ROUND_COUNT_2026) return races;
   return races.filter((race) => {
     const round = roundFromRaceName(race?.name);
-    return !isCancelledRound(round);
+    if (!isCancelledRound(round)) return true;
+    return !looksLikeCancelledRaceName(race?.name);
   });
 }
 
@@ -391,16 +402,18 @@ function activatePage(pageKey, updateHash = true) {
 
 function load() {
   const raw = localStorage.getItem(STORAGE_KEY);
-  if (!raw) return;
+  if (!raw) return false;
   try {
     const parsed = JSON.parse(raw);
     if (Array.isArray(parsed.teams) && Array.isArray(parsed.races)) {
       state.teams = parsed.teams;
       state.races = removeCancelledRaces(parsed.races);
+      return true;
     }
   } catch (_err) {
     // ignore corrupted storage and start fresh
   }
+  return false;
 }
 
 function initDefaultRaces() {
@@ -1595,13 +1608,22 @@ window.addEventListener("hashchange", () => {
 });
 
 async function bootstrap() {
-  load();
-
-  const loadedBundledLeague = await autoLoadBundledLeagueJson();
-  if (!loadedBundledLeague) {
-    initDefaultRaces();
-    ensurePreloadedTeams();
+  const loadedLocalLeague = load();
+  if (loadedLocalLeague) {
     normalizeRaceResultsToDriverNames();
+    save();
+  } else {
+    const loadedBundledLeague = await autoLoadBundledLeagueJson();
+    if (!loadedBundledLeague) {
+      initDefaultRaces();
+      ensurePreloadedTeams();
+      normalizeRaceResultsToDriverNames();
+      save();
+    }
+  }
+
+  if (!state.races.length) {
+    initDefaultRaces();
     save();
   }
 

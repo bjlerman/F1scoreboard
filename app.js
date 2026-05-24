@@ -1608,13 +1608,17 @@ window.addEventListener("hashchange", () => {
 });
 
 async function bootstrap() {
-  const loadedLocalLeague = load();
-  if (loadedLocalLeague) {
-    normalizeRaceResultsToDriverNames();
-    save();
-  } else {
-    const loadedBundledLeague = await autoLoadBundledLeagueJson();
-    if (!loadedBundledLeague) {
+  // Always fetch the bundled JSON first — it's the source of truth
+  const loadedBundledLeague = await autoLoadBundledLeagueJson();
+
+  if (!loadedBundledLeague) {
+    // JSON unavailable (offline, file missing) — fall back to localStorage
+    const loadedLocalLeague = load();
+    if (loadedLocalLeague) {
+      normalizeRaceResultsToDriverNames();
+      save();
+    } else {
+      // No localStorage either — use hardcoded defaults
       initDefaultRaces();
       ensurePreloadedTeams();
       normalizeRaceResultsToDriverNames();
@@ -1626,7 +1630,7 @@ async function bootstrap() {
     initDefaultRaces();
     save();
   }
-
+  
   renderAll();
   activatePage(pageKeyFromHash(), false);
   sync2026ScheduleFromApi();
